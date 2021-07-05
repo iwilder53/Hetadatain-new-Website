@@ -1,0 +1,335 @@
+ body {
+      position: relative; 
+  }
+  .bg-primary-btn{
+    background-color:#116149 ;
+    color: #fff;
+  }
+.primary-text{
+    color:#000000;
+}
+.primary-heading{
+     color:#116149 !important;
+}
+.primary{
+     color:#a59292 !important;
+}
+.btn-secondary{
+    color:#fff;
+    background-color: #5dc378;;
+    
+}
+.secondary{
+  color: #5dc378 !important;
+}
+.highlight{
+  color:#000000 !important;
+  background-color: #baff97 !important;
+}
+.f-1{
+font-size: 12px;
+}
+.f-2{
+font-size: 14px;
+}
+
+.links{
+    text-decoration: none  !important;
+    color:#116149 !important;
+    transition: transform .2s; /* Animation */
+  
+ 
+}
+
+.links:hover{
+    text-decoration: none  !important;
+    color:#116149 !important;
+     transform: scale(1.03);
+}
+
+.primary-border-color{
+border: solid 2px #8cdc52;
+}
+.curve-right{
+    
+    position: absolute;
+    left: 0;
+    margin-left: 170px;
+    top: 67px;
+
+}
+.curve-left{
+    
+    position: absolute;
+    left: 0;
+    margin-left: 166px;
+    top: 130px;
+
+}
+
+
+.curve-right{
+    
+    position: absolute;
+    left: 0;
+    margin-left: 170px;
+    top: 67px;
+
+}
+
+.curve-bottom{
+    
+    position: absolute;
+    left: 0;
+    margin-left: 238px;
+    top: 67px;
+
+}
+
+.card-bgm{
+    background:#fffffff0;
+    
+}
+.card-color{
+    color:#116149
+}
+
+.card-heading{
+   background-image: linear-gradient(to right, #a8ff78c9, #78ffd6b0);
+}
+
+
+/* 
+DropDown
+*/
+
+.zoom {
+
+  transition: transform .3s; /* Animation */
+  
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.05);
+  background-color: #e6ffd7;
+  border-radius: 8px;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 50px;
+   background-color:#9fff89;
+   color: white;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+}
+
+.image-container:hover .ceo-image {
+  opacity: 0.3;
+}
+
+.image-container:hover .middle {
+  opacity: 1;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.image-container {
+  position: relative;
+  width: 50%;
+}
+
+.ceo-image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.text {
+
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff !important;
+    background-color: #9fff89 !important;
+    border-color: unset !important;
+}
+/* Button used to open the chat form - fixed at the bottom of the page */
+.chat-open-button {
+  z-index:2;
+  background-color: rgb(14, 119, 0);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  
+  z-index: 10;
+
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  z-index: 11;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  z-index: 11;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  z-index: 11;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  z-index: 11;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  z-index: 11;
+  padding: 6px 20px;
+  width: 100%;
+  background-color: red;
+  color: white
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,  .open-button:hover .cancel:hover {
+  opacity: 0.5;
+}
+
+
+
+.modal-newsletter {	
+  color: #999;
+  width: 625px;
+  font-size: 15px;
+  margin: 30px auto;
+}
+.modal-newsletter .modal-content {
+  padding: 30px;
+  border-radius: 0;		
+  border: none;
+}
+.modal-newsletter .modal-header {
+  border-bottom: none;   
+      position: relative;
+  border-radius: 0;
+}
+.modal-newsletter h4 {
+  color: #000;
+  font-size: 30px;
+  margin: 0;
+  font-weight: bold;
+}
+.modal-newsletter .close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  text-shadow: none;
+  opacity: 0.3;
+  font-size: 24px;
+}
+.modal-newsletter .close:hover {
+  opacity: 0.8;
+}
+.modal-newsletter .icon-box {
+  color: #7265ea;		
+  display: inline-block;
+  z-index: 9;
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.modal-newsletter .icon-box i {
+  font-size: 110px;
+}
+.modal-newsletter .form-control, .modal-newsletter .btn {
+  min-height: 46px;
+  border-radius: 5;
+}
+.modal-newsletter .form-control {
+  box-shadow: none;
+  border-color: #dbdbdb;
+}
+.modal-newsletter .form-control:focus {
+  border-color: #f95858;
+  box-shadow: 0 0 8px rgba(249, 88, 88, 0.4);
+}
+  .modal-newsletter .btn {
+      color: #fff;
+  background: #f95858;
+  text-decoration: none;
+  transition: all 0.4s;
+      line-height: normal;
+  padding: 6px 20px;
+  min-width: 150px;
+  margin-left: 6px !important;
+      border: none;
+  }
+.modal-newsletter .btn:hover, .modal-newsletter .btn:focus {
+  box-shadow: 0 0 8px rgba(249, 88, 88, 0.4);
+  background: #f72222;
+  outline: none;
+}
+.modal-newsletter .input-group {
+  margin-top: 30px;
+}
+.hint-text {
+  margin: 100px auto;
+  text-align: center;
+}

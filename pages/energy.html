@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hetadatain</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
+</head>
+
+<body  style="font-family: 'Roboto', sans-serif;">
+    <!--Nav bar-->
+    <nav class="navbar navbar-expand-md  " style="background-color: #ffffff7d;">
+        <a class="navbar-brand  " href="../index.html">
+            <img src="../images/hetadatain.png" alt="" style="width: 140px;">
+        </a>
+        <button class="navbar-toggler bg-success" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item   mega-menu">
+                    <a class="nav-link primary-heading " href="#">
+                        <span class="">Real Time Dashboard</span>
+                    </a>
+                </li>
+                <!--     <li class="nav-item ">
+                                <a class="nav-link primary-heading zoom" href="#">About Us</a>
+                            </li> -->
+    
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="btn  bg-primary-btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Presentation
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a href="../docs/HETADATAIN%20PRESENTATION.pdf" target="_blank" class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">Energy Optimisation, A new approach</div>
+                                </div>
+                            </a>
+                            <a href="../docs/HD%20Pump%20Efficiency%20Presentation.pdf" target="_blank"
+                                class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">Energy Optimisation and Productivity Monitoring
+                                        <br>using
+                                        Simulation Techniques</div>
+                                </div>
+                            </a>
+                            <a href="../docs/HETA_IoT_AI_APR_2020.pdf" target="_blank" class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">IoT and AI. How to automate a Process</div>
+                                </div>
+                            </a>
+                            <a href="../docs/M%26V%20Report.pdf" target="_blank" class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">M&V Report Calculation details</div>
+                                </div>
+                            </a>
+                            <a href="../docs/HETA_PMS_EMS_APR_2020.pdf" target="_blank" class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">Productivity & Energy Optimisation.<br> A novel
+                                        method</div>
+                                </div>
+                            </a>
+                            <a href="../docs/HETA_EMS_Institutions_Hostels.pdf" target="_blank" class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">EMS for Institutions, Colleges & Hostels</div>
+                                </div>
+                            </a>
+    
+                        </div>
+                        <!--   <a class="nav-link primary-heading zoom sm-menu" href="#">Presentation</a> -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link primary-heading zoom " href="#ceo">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link primary-heading zoom" href="#forms">Have Query?</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Nav bar-->
+    <!--Nav bar-->
+    <div class="col-md-12 mega-menu-view d-none" style="position: absolute;  z-index: 11;">
+        <div class="card border-0 shadow" style="background:#e6ffd7">
+            <div class="card-body">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p class="h6 primary-heading ml-4">On-Shore</p>
+                            <ul class="list-group list-group-flush primary-heading">
+                                <li class="list-group-item bg-transparent p-0"><a class="nav-link  primary-heading"
+                                        href="http://jnmc.hetadatain.com/" target="_blank">JNMC</a></li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://dmims.hetadatain.com/" target="_blank">DMIMS</a></li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://avbrh.hetadatain.com/" target="_blank">AVBRH</a></li>
+                            </ul>
+    
+                            <ul class="list-group list-group-flush  primary-heading mt-2">
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://zimlab.hetadatain.com/" target="_blank">ZIM
+                                        LAB</a></li>
+                                <li class="list-group-item bg-transparent  p-0">
+                                    <a class="nav-link primary-heading" href="http://zim-dummy.hetadatain.com/"
+                                        target="_blank">ZIM Boiler</a>
+                                </li>
+    
+                            </ul>
+                            <ul class="list-group list-group-flush primary-heading mt-2">
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://50.62.22.142/" target="_blank">ALPHA Foam</a></li>
+                            </ul>
+                            <ul class="list-group list-group-flush primary-heading mt-2">
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://suruchi.hetadatain.com/" target="_blank">Suruchi Spices</a></li>
+                            </ul>
+    
+                            <ul class="list-group list-group-flush primary-heading mt-2">
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://vfm.hetadatain.com/" target="_blank">VFM</a>
+                                </li>
+                                <li class="list-group-item bg-transparent  p-0">
+                                    <a class="nav-link primary-heading" href="http://riyamill.hetadatain.com/"
+                                        target="_blank">Spider EYE</a>
+                                </li>
+                            </ul>
+    
+    
+    
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h6 primary-heading ml-4">Off-Shore</p>
+                            <ul class="list-group list-group-flush primary-text">
+    
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link  primary-heading"
+                                        href="http://166.62.91.152/emicool/final/DCP1/index.php" target="_blank">Emicool DCP
+                                        1</a></li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://166.62.91.152/emicool/final/DCP3/index.php" target="_blank"> Emicool
+                                        DCP 3</a></li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://166.62.91.152/emicool/final/DCP6/index.php" target="_blank"> Emicool
+                                        DCP 6</a></li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://hetadatain-001-site1.itempurl.com/emicool_7/DCP7_v1/index.php"
+                                        target="_blank"> Emicool DCP
+                                        7</a></li>
+                            </ul>
+                            <ul class="list-group list-group-flush primary-text mt-2">
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://83.111.145.73/zhs_ems/www/client/html/login.php"
+                                        target="_blank">Zulekha
+                                        Hospital, Sharjah</a>
+                                </li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://83.111.145.73/zhd_ems/www/client/html/login.php"
+                                        target="_blank">Zulekha
+                                        Hospital, Dubai</a>
+                                </li>
+                            </ul>
+                            <ul class="list-group list-group-flush primary-text mt-2">
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://hetadb-001-site2.ctempurl.com/md_project/client/html/index.php"
+                                        target="_blank">Aircon
+                                        Monitoring Dubai</a>
+                                </li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://hetadb-001-site2.ctempurl.com/ahu_project/client/html/login.php"
+                                        target="_blank">AHU
+                                        Greens</a>
+                                </li>
+    
+    
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="h6 primary-heading ml-4">Demos</p>
+                            <ul class="list-group list-group-flush primary-text">
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://166.62.91.152/audit/www/current/rp/" target="_blank">IRTD Demo</a></li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://166.62.91.152/ems_demo/www/client/html/index.php" target="_blank">EMS
+                                        Demo</a>
+                                </li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://166.62.91.152/pms_demo/www/client/html/index.php" target="_blank">PMS
+                                        Demo</a>
+                                </li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://166.62.91.152/ems_demo_dubai/www/client/html/index.php"
+                                        target="_blank">Ems
+                                        (Demo) Dubai</a>
+                                </li>
+                                <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                        href="http://166.62.91.152/ahu_demo/www/client/html/login.php" target="_blank">AHU
+                                        (Demo)
+                                        Dubai</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--presentation-->
+    <div class="container-fluid" style="height: 90vh;
+         background-image: url('../images/services/ems.png');
+         background-repeat: no-repeat, repeat;
+         background-attachment: fixed;
+         background-position: right;">
+        <div class="col-md-12" style="height: inherit;">
+            <div class="row" style="height: inherit;">
+                <div class="col-md-6 d-flex align-items-start flex-column shadow-sm p-3" data-aos="fade-down"  data-aos-once="true">
+                    <div class="mb-auto mt-auto p-3 text-white" style="
+                        background: #00000052;
+                    ">
+                        <h3>Energy Monitoring</h3>
+                        <p class="text-justify">
+                            "Energy Optimization and Management System” offers facility owners and operators a
+                            comprehensive integrated web based
+                            automated energy management program. Establish best practices across all energy functions
+                            including energy monitoring,
+                            scrutiny & surveillance with implicit post mortem of all issues which leads to greater
+                            energy efficiency and savings.We
+                            have cut back energy consumption in major District Cooling Plants, Industries, Hospitals and
+                            Medical institutes by about
+                            15-20% , amounting to 15 crore rupees per year.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="col-md-12" >
+            <h4 class="primary-heading">Process</h4>
+        </div>
+        <div class="col-md-12">
+            <div class="row" data-aos="fade-up"  data-aos-once="true">
+                <div class="col-md-12 shadow-sm p-3">
+                    <p class=" text-justify primary-text">
+                        Non Invasive transducers are installed at each electrical feeder to measure all electrical
+                        parameters . This enumerated
+                        data chronicled into the client & the server collects the data from all the client and upload it
+                        to the cloud for
+                        further processing. The data is then processed and is displayed on the web application which can
+                        be accessed anywhere in
+                        the world. This System Measure, Log, Stores and Analyzes Voltage, Current, Power and Energy of
+                        All Transformers and
+                        Feeders for every minute in the cloud. It’s like a MRI / CT SCAN of the Electrical Energy flow
+                        in the Factory. All
+                        Authorized Users can see the status of Electrical Energy consumption in their departments /
+                        floor / Factory in near Real
+                        Time, and earlier trends. It’s like invisible supervision of the Factory's equipment working.
+                        The waveform trends will
+                        indicate the nature of load, its deficiencies, its working problems, and the likelihood of any
+                        equipment failure in near
+                        future. It's like diagnosis after reading the CT SCAN / MRI report. The analysis is done by the
+                        team of experts, which
+                        then gives suggestions to reduce consumption of energy according to their research
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row" data-aos="fade-up"  data-aos-once="true">
+                <div class="col-md-5  d-flex justify-content-center" style="flex-direction: column;">
+                    <div class="card shadow-sm border-0 p-3">
+                        <img class="card-img-top " src="../images/rtd_1.png" alt="Card image cap">
+                        <div class="card-body p-0">
+                
+                
+                        </div>
+                    </div>
+
+                    <div class="card shadow-sm border-0 p-3 mt-2">
+                        <img class="card-img-top " src="../images/rtd_2.png" alt="Card image cap">
+                        <div class="card-body p-0">
+                            
+                    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 shadow-sm p-3">
+                    <p class="h5 primary-heading">Web Based Display of Factory Energy dashboard:</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Energy Consumption Profile for each transformer, floor, critical,
+                            others & cooling
+                            loads.
+                        </li>
+                        <li class="list-group-item">Interactive Pie charts, Line graphs, bar graph of power demand &
+                            energy consumption
+                            allows user to view complete picture
+                            of electrical consumption in every single section of Factory in real time.
+                        </li>
+                        <li class="list-group-item">Detailed Electrical Parameter graph for each feeder , departments on
+                            click
+                            Drop-down.
+                            Daily Reports provides a daily energy increment /decrements & energy usage cost.
+                        </li>
+                        <li class="list-group-item">Mismanagement of Factory Electrical System gives inefficient,
+                            insecure & rise in
+                            electricity bills.
+                        </li>
+                        <li class="list-group-item">In the following graph, Excessive fluctuations & spikes in power
+                            demand are
+                            critically notable.
+                        </li>
+                        <li class="list-group-item">We Find the Root Cause of Excessively fluctuated power demand &
+                            energy consumption
+                            such as incorrect operation of
+                            Factory electrical loads.
+                        </li>
+                        <li class="list-group-item">See the system graph after applying highly effective energy saving
+                            measures &
+                            philosophies.
+                        </li>
+                        <li class="list-group-item">Utmost Necessary changes made in operating pattern of Factory load &
+                            fluctuations
+                            smooths out which in turn gives
+                            attractive energy savings.  Savings of 14% has achieved (except cooling which is weather
+                            dependent).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 ">
+            <div class="row" data-aos="fade-up"  data-aos-once="true">
+                <div class="col-md-8 shadow-sm p-3">
+                    <p class="h5 primary-heading">Benefits of Factory Energy Management System:</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Invisible supervision: The system supervises the process as it can
+                            log the process start time, stop time and process
+                            running time.
+                        </li>
+                        <li class="list-group-item">Manpower free: No manpower is required to run it after the
+                            installation process.
+                        </li>
+                        <li class="list-group-item">Online display 24*7: The web application can be accessed from
+                            anywhere in the world at any time we want to.
+                        </li>
+                        <li class="list-group-item">Mismanagement of Factory Electrical System gives inefficient,
+                            insecure &
+                            rise in electricity bills.
+                        </li>
+                        <li class="list-group-item">Authentic System: The system once set up it will be untouched by
+                            hand so you get a clear record of data.
+                        </li>
+                        <li class="list-group-item">Energy Cost Monitoring: Tracking the interval data along with the
+                            Real time Energy cost with Daily & historical energy
+                            cost graph provides comprehensive energy cost monitoring further, trends data can be
+                            identified to accurately plan
+                            monthly and yearly budgets.
+                        </li>
+                        <li class="list-group-item">Reduce carbon footprint.</li>
+                        <li class="list-group-item">Daily Actionable Report</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                     <img src="../images/productivity/5.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-3">
+            <div class="row" data-aos="fade-up"  data-aos-once="true">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="../images/energy/1.svg" alt="">
+                </div>
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h4">Energy Optimisation System details</p>
+                    <p class="h5 primary-heading">Energy Usage and Cost</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Collect, digitalize and store utility information to get a full
+                            picture of energy consumption and costs per facility and
+                            site
+                        </li>
+                        <li class="list-group-item">Site Examine various utilities cost and consumption measures</li>
+                        <li class="list-group-item">Access real-time and historical information to analyze costs and
+                            usage, leading to proactive action</li>
+                            <li class="list-group-item">Analyze data from various feeders at periodic intervals</li>
+                            <li class="list-group-item">Analyze data in real-time in order to identify problems</li>
+                            <li class="list-group-item">View and analyze data stored in the database (SQL)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       <!--  <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="h5 primary-heading">Energy Usage and Cost</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Analyze data from various feeders at periodic intervals</li>
+                        <li class="list-group-item">Analyze data in real-time in order to identify problems</li>
+                        <li class="list-group-item">View and analyze data stored in the database (SQL)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+        </div> -->
+        <div class="col-md-12 mt-3">
+            <div class="row" data-aos="fade-up"  data-aos-once="true">
+                
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h5 primary-heading">Energy Usage trend analysis by Simulation</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Derive relationship between different process, weather and equipment
+                            using Computer Simulation techniques</li>
+                        <li class="list-group-item">Find out the most cogent relationship which affects the Energy
+                            usage, and suggest methods to optimize the Energy usage</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center" >
+                        <img src="../images/energy/3.svg" alt="" style="width: 145px;">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-3">
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="../images/energy/2.svg" alt="" style="width: 145px;">
+                </div>
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h5 primary-heading">Achieving Energy savings.</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">View baseline, past, or current energy measurements for a set of
+                            facilities to determine where a specific building ranks
+                            with respect to others
+                        </li>
+                        <li class="list-group-item">Compare buildings to similar sites to determine how well the
+                            portfolio is performing 
+                           
+                        </li>
+                        <li class="list-group-item">The energy usage baseline ranks sites and compares any time period as a baseline
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-12 mt-3 mb-4">
+            <div class="row" data-aos="fade-up"  data-aos-once="true">
+                
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h5 primary-heading">Energy efficiency issues</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Engage with customer base by providing project information with
+                            building occupants</li>
+                        <li class="list-group-item">Increase store employees, customers,and residents that have the
+                            biggest impact in energy consumption and cost.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="../images/energy/4.svg" alt=""  style="width: 145px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 text-center highlight">
+        <p class="p-3 primary-text">2020 Copyright: Hetadatain.com</p>
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        AOS.init({
+            duration: 1200,
+        })
+        $('.mega-menu').mouseover(function () {
+            $('.mega-menu-view').removeClass("d-none");
+        });
+
+        $('.mega-menu-view').mouseleave(function () {
+            $('.mega-menu-view').addClass("d-none");
+        });
+
+         $('.sm-menu').mouseover(function () {
+            $('.menu-presentation').removeClass("d-none");
+        });
+
+        $('.menu-presentation').mouseleave(function () {
+            $('.menu-presentation').addClass("d-none");
+        });
+        $(function () {
+            $(".patents-badge").popover('show');
+            setTimeout(function () {
+                $('.patents-badge').popover('hide');
+            }, 10000);
+
+        });
+        $(".patents-badge").click(function () {
+            $('.patents-badge').popover('dispose');
+            // alert("Handler for .click() called.");
+        });
+    });
+
+</script>
+
+</html>

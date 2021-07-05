@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hetadatain</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <!--Nav bar-->
+        <nav class="navbar navbar-expand-md  " style="background-color: #ffffff7d;">
+            <a class="navbar-brand  " href="../index.html">
+                <img src="../images/hetadatain.png" alt="" style="width: 140px;">
+            </a>
+            <button class="navbar-toggler bg-success" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item   mega-menu">
+                        <a class="nav-link primary-heading " href="#">
+                            <span class="">Real Time Dashboard</span>
+                        </a>
+                    </li>
+                    <!--     <li class="nav-item ">
+                                    <a class="nav-link primary-heading zoom" href="#">About Us</a>
+                                </li> -->
+        
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn  bg-primary-btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Presentation
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a href="../docs/HETADATAIN%20PRESENTATION.pdf" target="_blank" class="links dropdown-item">
+                                    <div class="d-flex flex-row bd-highlight  align-items-center">
+                                        <div class=" bd-highlight">
+                                            <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                        </div>
+                                        <div class="f-1 bd-highlight ml-2">Energy Optimisation, A new approach</div>
+                                    </div>
+                                </a>
+                                <a href="../docs/HD%20Pump%20Efficiency%20Presentation.pdf" target="_blank"
+                                    class="links dropdown-item">
+                                    <div class="d-flex flex-row bd-highlight  align-items-center">
+                                        <div class=" bd-highlight">
+                                            <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                        </div>
+                                        <div class="f-1 bd-highlight ml-2">Energy Optimisation and Productivity Monitoring
+                                            <br>using
+                                            Simulation Techniques</div>
+                                    </div>
+                                </a>
+                                <a href="../docs/HETA_IoT_AI_APR_2020.pdf" target="_blank" class="links dropdown-item">
+                                    <div class="d-flex flex-row bd-highlight  align-items-center">
+                                        <div class=" bd-highlight">
+                                            <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                        </div>
+                                        <div class="f-1 bd-highlight ml-2">IoT and AI. How to automate a Process</div>
+                                    </div>
+                                </a>
+                                <a href="../docs/M%26V%20Report.pdf" target="_blank" class="links dropdown-item">
+                                    <div class="d-flex flex-row bd-highlight  align-items-center">
+                                        <div class=" bd-highlight">
+                                            <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                        </div>
+                                        <div class="f-1 bd-highlight ml-2">M&V Report Calculation details</div>
+                                    </div>
+                                </a>
+                                <a href="../docs/HETA_PMS_EMS_APR_2020.pdf" target="_blank" class="links dropdown-item">
+                                    <div class="d-flex flex-row bd-highlight  align-items-center">
+                                        <div class=" bd-highlight">
+                                            <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                        </div>
+                                        <div class="f-1 bd-highlight ml-2">Productivity & Energy Optimisation.<br> A novel
+                                            method</div>
+                                    </div>
+                                </a>
+                                <a href="../docs/HETA_EMS_Institutions_Hostels.pdf" target="_blank" class="links dropdown-item">
+                                    <div class="d-flex flex-row bd-highlight  align-items-center">
+                                        <div class=" bd-highlight">
+                                            <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                        </div>
+                                        <div class="f-1 bd-highlight ml-2">EMS for Institutions, Colleges & Hostels</div>
+                                    </div>
+                                </a>
+        
+                            </div>
+                            <!--   <a class="nav-link primary-heading zoom sm-menu" href="#">Presentation</a> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link primary-heading zoom " href="#ceo">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link primary-heading zoom" href="#forms">Have Query?</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Nav bar-->
+        <!--Nav bar-->
+        <div class="col-md-12 mega-menu-view d-none" style="position: absolute;  z-index: 11;">
+            <div class="card border-0 shadow" style="background:#e6ffd7">
+                <div class="card-body">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="h6 primary-heading ml-4">On-Shore</p>
+                                <ul class="list-group list-group-flush primary-heading">
+                                    <li class="list-group-item bg-transparent p-0"><a class="nav-link  primary-heading"
+                                            href="http://jnmc.hetadatain.com/" target="_blank">JNMC</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://dmims.hetadatain.com/" target="_blank">DMIMS</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://avbrh.hetadatain.com/" target="_blank">AVBRH</a></li>
+                                </ul>
+        
+                                <ul class="list-group list-group-flush  primary-heading mt-2">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://zimlab.hetadatain.com/" target="_blank">ZIM
+                                            LAB</a></li>
+                                    <li class="list-group-item bg-transparent  p-0">
+                                        <a class="nav-link primary-heading" href="http://zim-dummy.hetadatain.com/"
+                                            target="_blank">ZIM Boiler</a>
+                                    </li>
+        
+                                </ul>
+                                <ul class="list-group list-group-flush primary-heading mt-2">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://50.62.22.142/" target="_blank">ALPHA Foam</a></li>
+                                </ul>
+                                <ul class="list-group list-group-flush primary-heading mt-2">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://suruchi.hetadatain.com/" target="_blank">Suruchi Spices</a></li>
+                                </ul>
+        
+                                <ul class="list-group list-group-flush primary-heading mt-2">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://vfm.hetadatain.com/" target="_blank">VFM</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0">
+                                        <a class="nav-link primary-heading" href="http://riyamill.hetadatain.com/"
+                                            target="_blank">Spider EYE</a>
+                                    </li>
+                                </ul>
+        
+        
+        
+                            </div>
+                            <div class="col-md-4">
+                                <p class="h6 primary-heading ml-4">Off-Shore</p>
+                                <ul class="list-group list-group-flush primary-text">
+        
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link  primary-heading"
+                                            href="http://166.62.91.152/emicool/final/DCP1/index.php" target="_blank">Emicool DCP
+                                            1</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/emicool/final/DCP3/index.php" target="_blank"> Emicool
+                                            DCP 3</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/emicool/final/DCP6/index.php" target="_blank"> Emicool
+                                            DCP 6</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://hetadatain-001-site1.itempurl.com/emicool_7/DCP7_v1/index.php"
+                                            target="_blank"> Emicool DCP
+                                            7</a></li>
+                                </ul>
+                                <ul class="list-group list-group-flush primary-text mt-2">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://83.111.145.73/zhs_ems/www/client/html/login.php"
+                                            target="_blank">Zulekha
+                                            Hospital, Sharjah</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://83.111.145.73/zhd_ems/www/client/html/login.php"
+                                            target="_blank">Zulekha
+                                            Hospital, Dubai</a>
+                                    </li>
+                                </ul>
+                                <ul class="list-group list-group-flush primary-text mt-2">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://hetadb-001-site2.ctempurl.com/md_project/client/html/index.php"
+                                            target="_blank">Aircon
+                                            Monitoring Dubai</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://hetadb-001-site2.ctempurl.com/ahu_project/client/html/login.php"
+                                            target="_blank">AHU
+                                            Greens</a>
+                                    </li>
+        
+        
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="h6 primary-heading ml-4">Demos</p>
+                                <ul class="list-group list-group-flush primary-text">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/audit/www/current/rp/" target="_blank">IRTD Demo</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/ems_demo/www/client/html/index.php" target="_blank">EMS
+                                            Demo</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/pms_demo/www/client/html/index.php" target="_blank">PMS
+                                            Demo</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/ems_demo_dubai/www/client/html/index.php"
+                                            target="_blank">Ems
+                                            (Demo) Dubai</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/ahu_demo/www/client/html/login.php" target="_blank">AHU
+                                            (Demo)
+                                            Dubai</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--presentation-->
+    <!--End presentation-->
+
+    <div class="container-fluid" style="height: 90vh;
+         background-image: url('../images/services/pms.png');
+         background-repeat: no-repeat, repeat;
+         background-attachment: fixed;
+         background-position: right;">
+        <div class="col-md-12" style="height: inherit;">
+            <div class="row" style="height: inherit;">
+                <div class="col-md-6 d-flex align-items-start flex-column " data-aos="fade-down"  data-aos-once="true">
+                    <div class="mb-auto mt-auto text-white p-3" style="
+                      background: #00000094;
+                    ">
+                        <h3>Productivity Optimisation</h3>
+                        <p class="text-justify">
+                            Real Time Monitoring of Machine Production, Running / Idle
+                            / Breakdown / Stoppage time and Energy parameters
+                            simultaneously, gives enough data to map the Energy Intensity of each Machine /
+                            Process. We have simultaneously improved
+                            production and lowered power consumption of large pharmaceutical and automobile
+                            industries.
+                        </p>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="col-md-12">
+            <h4>Process</h4>
+        </div>
+        <div class="col-md-12">
+            <div class="row" data-aos="fade-up"  data-aos-once="true">
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h5 primary-heading">Typical problems with an Industry :</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Machine up-time and down-time surge issues.</li>
+                        <li class="list-group-item">Idling and Minor stops.</li>
+                        <li class="list-group-item">Performance Loss.</li>
+                        <li class="list-group-item">Equipment failure (i.e. tooling failure, breakdowns).</li>
+                        <li class="list-group-item">High energy consumption but low efficiency of equipment's.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="../images/productivity/1.svg"  alt="">
+                </div>
+            </div>
+            <div class="row mt-2"  data-aos="fade-up"  data-aos-once="true">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="../images/productivity/2.svg" alt="">
+                </div>
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h5 primary-heading ">Who requires this ?</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Production Team.</li>
+                        <li class="list-group-item">Dispatch Team.</li>
+                        <li class="list-group-item">Production Planning Team.</li>
+                        <li class="list-group-item">Breakdown / Preventive Maintenance Team.</li>
+                        <li class="list-group-item">Human Resource Department.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-2"  data-aos="fade-up"  data-aos-once="true" >
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h5 primary-heading">What is Monitored ?</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Running status of each machine.</li>
+                        <li class="list-group-item">Breakup of Running time, Idle Time and Stop Time.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+            <div class="row mt-2"  data-aos="fade-up">
+                <div class="col-md-6 d-flex justify-content-center ">
+                    <img src="../images/productivity/3.svg" alt="">
+                </div>
+                <div class="col-md-6 primary-heading shadow-sm p-3">
+                    <p class="h5">How this benefits the Top Management?</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Factory production can be monitored from any time and location, to
+                            authorized user with the help
+                            of internet.
+                        </li>
+                        <li class="list-group-item">Post Production data can be analyzed without any input from any
+                            office staff.
+                        </li>
+                        <li class="list-group-item">PNo need to leave instruction for update on production status to
+                            subroutines.
+                        </li>
+                        <li class="list-group-item">Non Altered data available for analysis.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-2"  data-aos="fade-up">
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h5 primary-heading">How this benefits the Middle Management?</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Analysis of the machine status without visiting the shop floor.</li>
+                        <li class="list-group-item">Keep a track on Real Machine Breakdown status.</li>
+                        <li class="list-group-item">Inform the Material department in event of shortage of raw material
+                            or any machine
+                        </li>
+                        <li class="list-group-item">He gets a feel of the bottle neck in the production process, and
+                            utilizes his energies there.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="../images/productivity/4.svg" alt="">
+                </div>
+            </div>
+            <div class="row mt-3"  data-aos="fade-up">
+                <div class="col-md-5 d-flex justify-content-center">
+                    <img src="../images/productivity/6.svg" alt="">
+                </div>
+                <div class="col-md-7 shadow-sm p-3">
+                    <p class="h5 primary-heading ">PROCESS OF INTELLIGENT REAL TIME MONITORING SYSTEM</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Energy, process and production data is extracted at regular
+                            intervals from the manufacturing
+                            machines.
+                        </li>
+                        <li class="list-group-item">Data retrieval by NON-INVASIVE TRANSDUCER does not intrude the
+                            running system and all the
+                            data is collected by our Embedded System.
+                        </li>
+                        <li class="list-group-item">Our intelligent system uploads the collected data to the cloud,
+                            where the requisite computations
+                            are done for the Energy Flow and Energy Loss at various locations.
+                        </li>
+                        <li class="list-group-item">Beyond the four walls of the confined production facility, the
+                            transfer to Cloud-Based software
+                            system allows employees and administrators to view the performance status of the
+                            manufacturing
+                            machines.
+                        </li>
+                        <li class="list-group-item">The graphical representations of the data can be viewed worldwide on
+                            our Web / Android / IOS
+                            applications.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3"  data-aos="fade-up">
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h5 primary-heading">Advantages of INTELLIGENT REAL TIME MONITORING SYSTEM</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Invisible Supervision.</li>
+                        <li class="list-group-item">Predictive Maintenance.</li>
+                        <li class="list-group-item">Alert Maintenance and Production Team.</li>
+                        <li class="list-group-item">No Manpower Required to Run.</li>
+                        <li class="list-group-item">Integrated with ERP,SAP.</li>
+                        <li class="list-group-item">Can be Viewed on Mobile, Tab.
+                            Running status of each machine.
+                        </li>
+                        <li class="list-group-item">Breakup of Running time, Idle Time and Stop Time
+                            How this benefits the Top Management?
+                        </li>
+                        <li class="list-group-item">Factory production can be monitored from any time and location, to
+                            authorized user with the help
+                            of internet.
+                        </li>
+                        <li class="list-group-item">Factory production can be monitored from any time and location, to
+                            authorized user with the help
+                            of internet.
+                        </li>
+                        <li class="list-group-item">Post Production data can be analyzed without any input from any
+                            office staff.</li>
+                        <li class="list-group-item">No need to leave instruction for update on production status to
+                            subroutines.</li>
+                        <li class="list-group-item">Non Altered data available for analysis.
+                            How this benefits the Middle Management?
+                        </li>
+                        <li class="list-group-item">Non Altered data available for analysis.
+                            How this benefits the Middle Management?
+                        </li>
+                        <li class="list-group-item">Analysis of the machine status without visiting the shop floor.</li>
+                        <li class="list-group-item">Keep a track on Real Machine Breakdown status.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="../images/productivity/5.svg" alt="">
+                </div>
+            </div>
+            <div class="row"  data-aos="fade-up">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h5 primary-heading">How this System is installed?</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Real Time Data of Machine Status, Production, Stoppages etc are
+                            logged through Non-Invasive Sensors to a Embedded
+                            Server.
+                        </li>
+                        <li class="list-group-item">he Data is uploaded to the Cloud for Analysis and Storage</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row"  data-aos="fade-up">
+                <div class="col-md-12 shadow-sm p-3">
+                    <p class="h5 primary-heading ">The Front end Dashboard on any Authorized User can then see the following :</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Status of the Machine</li>
+                        <li class="list-group-item">Trends of machine Production through the day</li>
+                        <li class="list-group-item">Production and Down time details of the day</li>
+                        <li class="list-group-item">Any predefined KPI of the system</li>
+                        <li class="list-group-item">Predefined Alerts are sent to concerned departments when the Machine
+                            / Production is not in the
+                            set limits.
+                        </li>
+                    </ul>
+                </div>
+              
+            </div>
+            <div class="row"  data-aos="fade-up">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="../images/productivity/7.svg" alt="">
+                </div>
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h5 primary-heading">Information deduced by Intelligent Real Time Controller (Mother) from the data
+                        collected by
+                        Intelligent Real Time Detector (Daughter)
+                    </p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Working Time of the Machine</li>
+                        <li class="list-group-item">Idle Time of the Machine</li>
+                        <li class="list-group-item">Efficiency of the Machine</li>
+                        <li class="list-group-item">Cycle time of Machine (optional) Reports which are generated by the
+                            Intelligent Real Time Controller (Mother)</li>
+                        <li class="list-group-item">For the Machine</li>
+                        <li class="list-group-item">Time Analysis</li>
+                        <li class="list-group-item">Trend Analysis</li>
+                        <li class="list-group-item">Productivity Analysis</li>
+                        <li class="list-group-item">For the Shift / Operator</li>
+                        <li class="list-group-item">Working Time Analysis</li>
+                        <li class="list-group-item">Cycle Time Analysis</li>
+                        <li class="list-group-item">Machine Efficiency</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3"  data-aos="fade-up">
+                <div class="col-md-12 primary-heading shadow-sm p-3">
+                    <p class="h6">Power consumption of each Line (if Feeders are logged - optional). This can be linked
+                        with the
+                        production, and we can get KW/unit of production for each line.
+                    </p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Shift wise</li>
+                        <li class="list-group-item">Day wise</li>
+                        <li class="list-group-item">Month wise</li>
+                    </ul>
+                </div>
+                <div class="col-md-5 d-flex justify-content-center">
+                    
+                </div>
+            </div>
+            <div class="row mt-2"  data-aos="fade-up">
+               
+                <div class="col-md-6 shadow-sm p-3">
+                    <p class="h6 primary-heading">Deliverable by the system</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">Dashboard showing near Real Time status of each Line and its
+                            components, on any computer</li>
+                        <li class="list-group-item">Graphical trends of each line in any time frame</li>
+                        <li class="list-group-item">Reports of each line in any time frame</li>
+                        <li class="list-group-item">Display provision on any Smart TV showing the status of the lines
+                            shift-wise and day-wise</li>
+                        <li class="list-group-item">Daily Data in SQL / CSV database format for integration to your ERP
+                            / SAP</li>
+                    </ul>
+                </div>
+            <div class="col-md-6 ">
+                <div class="card shadow-sm border-0 p-3">
+                    <img class="card-img-top " src="/images/rtd_1.png" alt="Card image cap">
+                    <div class="card-body p-0">
+            
+            
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="row mt-3 mb-5"  data-aos="fade-up">
+                <div class="col-md-12 shadow-sm p-3">
+                    <p class="h5 primary-heading ">System Deliverable:</p>
+                    <ul class="list-group list-group-flush primary-text">
+                        <li class="list-group-item">a) Energy Flow in the Factory with the following values</li>
+                        <li class="list-group-item">i. Voltages</li>
+                        <li class="list-group-item">ii. Current</li>
+                        <li class="list-group-item">iii. Active Power</li>
+                        <li class="list-group-item">iv. Power factor</li>
+                        <li class="list-group-item">v. Reactive Power</li>
+                        <li class="list-group-item">vi. Energy</li>
+                        <li class="list-group-item">b) Graphical 24 hour trends of any of the above parameters for all
+                            the feeders in the Factory</li>
+                        <li class="list-group-item">i. This will be available in JPG, XLS, CSV, PDF formats</li>
+                        <li class="list-group-item">c) BI Reports for hourly trends for any of the above parameters for
+                            all the feeders in the
+                            Factory
+                        </li>
+                        <li class="list-group-item">i. This will be available in JPG, XLS, CSV, PDF formats</li>
+                        <li class="list-group-item">ii. The BI report can be sorted on any of the above values, i.e. the
+                            report can be sorted on
+                            the basis of Active Power etc.
+                        </li>
+                        <li class="list-group-item">2. A dashboard will be available for ANY ONE FEEDER</li>
+                        <li class="list-group-item">a) Graphical 24 hour Trends for any of the above parameters</li>
+                        <li class="list-group-item">i) This will be available in JPG, XLS, CSV, PDF formats</li>
+                        <li class="list-group-item">ii) The BI report can be sorted on any of the above values, i.e. the
+                            report can be sorted on
+                            the basis of Active Power etc.
+                        </li>
+                        <li class="list-group-item">i) This will be available in JPG, XLS, CSV, PDF formats</li>
+                        <li class="list-group-item">3. BI Report for any of the above feeder in any time frame, i.e.
+                            hourly, daily, weekly, monthly etc.</li>
+                        <li class="list-group-item">4. An ANDROID APPLICATION showing the above trends for registered
+                            users.</li>
+                        <li class="list-group-item">5. DATA of all parameter of each feeder will be stored in the cloud
+                            in a SQL Database, for analysis
+                            for future action by the user.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-center">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 text-center highlight">
+            <p class="p-3 primary-text">2020 Copyright: Hetadatain.com</p>
+        </div>
+    </div>
+    
+</body>
+<script>
+    $(document).ready(function () {
+        AOS.init({
+            duration: 1200,
+        })
+        $('.mega-menu').mouseover(function () {
+            $('.mega-menu-view').removeClass("d-none");
+        });
+
+        $('.mega-menu-view').mouseleave(function () {
+            $('.mega-menu-view').addClass("d-none");
+        });
+
+         $('.sm-menu').mouseover(function () {
+            $('.menu-presentation').removeClass("d-none");
+        });
+
+        $('.menu-presentation').mouseleave(function () {
+            $('.menu-presentation').addClass("d-none");
+        });
+        $(function () {
+            $(".patents-badge").popover('show');
+            setTimeout(function () {
+                $('.patents-badge').popover('hide');
+            }, 10000);
+
+        });
+        $(".patents-badge").click(function () {
+            $('.patents-badge').popover('dispose');
+            // alert("Handler for .click() called.");
+        });
+    });
+
+</script>
+</html>

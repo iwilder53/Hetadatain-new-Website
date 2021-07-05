@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hetadatain</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css" />
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="js/validation.js"></script>
+
+</head>
+
+<body style="font-family: 'Roboto', sans-serif; overflow-x: hidden; " data-spy="scroll">
+      <script>
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("dropdownMenuButton");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+// Get the modal
+
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-newsletter">
+            <div class="modal-content">
+                <form action="/examples/actions/actionPage.php" method="post">
+                    <div class="modal-header">
+                        <h4>Provide Email to continue</h4>	
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+                    </div>
+                    <div class="modal-body">					
+                        <p>Please enter your email address to continue</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <span class="input-group-btn">
+                                <input type="submit" class="btn btn-primary" value="Validate">
+                            </span>
+                        </div>
+                    </div>
+                </form>			
+            </div>
+        </div>
+    </div>
+    <button class="chat-open-button" onclick="openForm()">Help Desk</button>
+    
+    <div class="chat-popup" id="myForm">
+      <form action="/actionPage.php" class="form-container">
+        <h2>Need Any Help ?</h2>
+    
+      <!--   <label for="msg"><b>What Can We Help With ?</b></label> -->
+       <!--  <textarea placeholder="Type message.." name="msg" required></textarea> -->
+       <button type="submit" class="btn btn1 ">Know more about our products</button>
+       <button type="submit" class="btn btn2">Contact the CEO</button>
+       <button type="submit" class="btn btn3" onclick="">Want us to contact you? </button>
+        <button type="button" class="cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+    
+    <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+    <div class="container-fluid p-0 " style="
+         background-image: url('images/cover/cover_2.svg');
+         background-repeat: no-repeat;
+         ">
+        <!--Nav bar-->
+        <nav class="navbar navbar-expand-md  " style="background-color: #ffffff7d;">
+            <a class="navbar-brand  " href="index.html">
+                <img src="images/hetadatain.png" alt="" style="width: 140px;">
+            </a>
+            <button class="navbar-toggler bg-success" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item   mega-menu">
+                        <a class="nav-link primary-heading " href="#">
+                            <span class="">Real Time Dashboard</span>
+                        </a>
+                    </li>
+                <!--     <li class="nav-item ">
+                        <a class="nav-link primary-heading zoom" href="#">About Us</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn  bg-primary-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Presentation
+                            </button>  
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                             <a  href="docs/HETADATAIN%20PRESENTATION.pdf" target="_blank" class="links dropdown-item"> 
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="./images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">Energy Optimisation, A new approach</div>
+                                </div>
+                            </a>
+                            <a href="docs/HD%20Pump%20Efficiency%20Presentation.pdf" target="_blank" class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="./images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">Energy Optimisation and Productivity Monitoring <br>using
+                                    Simulation Techniques</div>
+                                </div>
+                            </a>
+                            <a href="docs/HETA_IoT_AI_APR_2020.pdf" target="_blank" class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="./images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">IoT and AI. How to automate a Process</div>
+                                </div>
+                            </a>
+                            <a href="docs/M%26V%20Report.pdf" target="_blank" class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="./images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">M&V Report Calculation details</div>
+                                </div>
+                            </a>
+                            <a href="docs/HETA_PMS_EMS_APR_2020.pdf" target="_blank" class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="./images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">Productivity & Energy Optimisation.<br> A novel method</div>
+                                </div>
+                            </a>
+                            <a href="docs/HETA_EMS_Institutions_Hostels.pdf" target="_blank" class="links dropdown-item">
+                                <div class="d-flex flex-row bd-highlight  align-items-center">
+                                    <div class=" bd-highlight">
+                                        <img src="./images/ems.svg" alt="" style="width: 30px;">
+                                    </div>
+                                    <div class="f-1 bd-highlight ml-2">EMS for Institutions, Colleges & Hostels</div>
+                                </div>
+                            </a>
+                            
+                        </div>
+                      <!--   <a class="nav-link primary-heading zoom sm-menu" href="#">Presentation</a> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link primary-heading zoom " href="#ceo">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link primary-heading zoom" href="#forms">Have Query?</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Nav bar-->
+        <div class="col-md-12 mega-menu-view d-none" style="position: absolute;  z-index: 11;">
+            <div class="card border-0 shadow" style="background:#e6ffd7">
+                <div class="card-body">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="h6 primary-heading ml-4">On-Shore</p>
+                                <ul class="list-group list-group-flush primary-heading">
+                                    <li class="list-group-item bg-transparent p-0"><a class="nav-link  primary-heading"
+                                            href="http://jnmc.hetadatain.com/" target="_blank">JNMC</a></li>
+                                    <li class="list-group-item bg-transparent  p-0" ><a class="nav-link primary-heading"
+                                            href="http://dmims.hetadatain.com/" target="_blank">DMIMS</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://avbrh.hetadatain.com/" target="_blank">AVBRH</a></li>
+                                </ul>
+
+                                <ul class="list-group list-group-flush  primary-heading mt-2">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading" href="http://zimlab.hetadatain.com/"
+                                            target="_blank">ZIM
+                                      LAB</a></li>
+                                        <li class="list-group-item bg-transparent  p-0">
+                                            <a class="nav-link primary-heading" href="http://zim-dummy.hetadatain.com/" target="_blank">ZIM Boiler</a>
+                                        </li>
+
+                                </ul>
+                                    <ul class="list-group list-group-flush primary-heading mt-2">
+                                        <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading" href="http://50.62.22.142/"
+                                                target="_blank">ALPHA Foam</a></li>
+                                    </ul>
+                                    <ul class="list-group list-group-flush primary-heading mt-2">
+                                        <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading" href="http://suruchi.hetadatain.com/"
+                                                target="_blank">Suruchi Spices</a></li>
+                                    </ul>
+
+                                    <ul class="list-group list-group-flush primary-heading mt-2">
+                                        <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading" href="http://vfm.hetadatain.com/"
+                                                target="_blank">VFM</a>
+                                        </li>
+                                        <li class="list-group-item bg-transparent  p-0">
+                                            <a class="nav-link primary-heading" href="http://riyamill.hetadatain.com/" target="_blank">Spider EYE</a>
+                                        </li>
+                                    </ul>
+                                    
+                                   
+                                
+                            </div>
+                            <div class="col-md-4">
+                                <p class="h6 primary-heading ml-4">Off-Shore</p>
+                                <ul class="list-group list-group-flush primary-text">
+
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link  primary-heading"
+                                            href="http://166.62.91.152/emicool/final/DCP1/index.php" target="_blank">Emicool DCP 1</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/emicool/final/DCP3/index.php" target="_blank"> Emicool DCP 3</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/emicool/final/DCP6/index.php" target="_blank"> Emicool DCP 6</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://hetadatain-001-site1.itempurl.com/emicool_7/DCP7_v1/index.php" target="_blank"> Emicool DCP
+                                            7</a></li>
+                                </ul>  
+                                <ul class="list-group list-group-flush primary-text mt-2">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://83.111.145.73/zhs_ems/www/client/html/login.php" target="_blank">Zulekha
+                                            Hospital, Sharjah</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://83.111.145.73/zhd_ems/www/client/html/login.php" target="_blank">Zulekha
+                                            Hospital, Dubai</a>
+                                    </li>
+                                </ul>
+                                <ul class="list-group list-group-flush primary-text mt-2">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://hetadb-001-site2.ctempurl.com/md_project/client/html/index.php" target="_blank">Aircon
+                                            Monitoring Dubai</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://hetadb-001-site2.ctempurl.com/ahu_project/client/html/login.php" target="_blank">AHU
+                                            Greens</a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="h6 primary-heading ml-4">Demo</p>
+                                <ul class="list-group list-group-flush primary-text">
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/audit/www/current/rp/" target="_blank">IRTD Demo</a></li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/ems_demo/www/client/html/index.php" target="_blank">EMS Demo</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/pms_demo/www/client/html/index.php" target="_blank">PMS Demo</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/ems_demo_dubai/www/client/html/index.php" target="_blank">Ems
+                                            (Demo) Dubai</a>
+                                    </li>
+                                    <li class="list-group-item bg-transparent  p-0"><a class="nav-link primary-heading"
+                                            href="http://166.62.91.152/ahu_demo/www/client/html/login.php" target="_blank">AHU (Demo)
+                                            Dubai</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--presentation-->
+        <div class="col-md-3 menu-presentation d-none" style="position: absolute;  z-index: 11;right: 0">
+            <div class="card border-0 shadow" style="background:#e6ffd7">
+                <div class="card-body">
+                    <div class="">
+                        <a href="../docs/HETADATAIN%20PRESENTATION.pdf" target="_blank" class="links">
+                            <div class="d-flex flex-row bd-highlight  align-items-center">
+                                <div class=" bd-highlight">
+                                    <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                </div>
+                                <div class="f-1 bd-highlight ml-2">Energy Optimisation, A new approach</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="mt-2">
+                        <a href="../docs/HD%20Pump%20Efficiency%20Presentation.pdf" target="_blank" class="mt-2 links">
+                            <div class="d-flex flex-row bd-highlight  align-items-center">
+                                <div class=" bd-highlight">
+                                    <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                </div>
+                                <div class="f-1 bd-highlight ml-2">Energy Optimisation and Productivity Monitoring using
+                                    Simulation Techniques</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="mt-2">
+                        <a href="../docs/M%26V%20Report.pdf" target="_blank" class="mt-2 links">
+                            <div class="d-flex flex-row bd-highlight  align-items-center">
+                                <div class=" bd-highlight">
+                                    <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                </div>
+                                <div class="f-1 bd-highlight ml-2">M&V Report Calculation details</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="mt-2">
+                        <a href="../docs/HETA_PMS_EMS_APR_2020.pdf" target="_blank" class="mt-2 links">
+                            <div class="d-flex flex-row bd-highlight  align-items-center">
+                                <div class=" bd-highlight">
+                                    <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                </div>
+                                <div class="f-1 bd-highlight ml-2 ">Productivity & Energy Optimisation. A novel method
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="mt-2">
+                        <a href="../docs/HETA_IoT_AI_APR_2020.pdf" target="_blank" class="mt-2 links">
+                            <div class="d-flex flex-row bd-highlight  align-items-center">
+                                <div class=" bd-highlight">
+                                    <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                </div>
+                                <div class="f-1 bd-highlight ml-2 ">IoT and AI. How to automate a Process</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="mt-2 ">
+                        <a href="../docs/HETA_EMS_Institutions_Hostels.pdf" target="_blank" class="mt-2 links">
+                            <div class="d-flex flex-row bd-highlight  align-items-center">
+                                <div class=" bd-highlight">
+                                    <img src="../images/ems.svg" alt="" style="width: 30px;">
+                                </div>
+                                <div class="f-1 bd-highlight ml-2">EMS for Institutions, Colleges & Hostels</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End presentation-->
+        <div class="container-fluid p-4" >
+            <div class="col-md-12  col-12">
+                <div class="row">
+                    <div class="col-md-7 col-12 text-center  mb-auto mt-auto ">
+                        <div class=" p-2 " style="background:#fdfdfd2e;width: fit-content;">
+                            <div data-aos="fade-right">
+                                <!-- <img src="images/vegan.svg" alt=""
+                           style="left: 50%;  position: absolute;  right: 43%;top: -32px;"> -->
+                                <h4 class="primary-heading ml-5 ">If you can't measure it, it doesn't exist</h4>
+                            </div>
+                            <p class="text-justify primary-text  ml-5 " data-aos="fade-up">You can only Control if you
+                                can Monitor and you
+                                can only
+                                <br> monitor if you
+                                have
+                                DATA. We provide the DATA, Monitor<br> and Control the Energy.
+                            </p>
+                            <!-- <button type="button" class="btn border-0 btn-secondary btn-sm ml-5">Have Query ?</button> -->
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-12 mb-auto mt-auto ">
+                        <div class="card shadow-sm border-0 bg-white rounded ">
+                            <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                </ol>
+                                <div class="carousel-inner ">
+                                    <div class="carousel-item active">
+                                        <div class="card border-0 card-bgm">
+                                            <img class="d-block " src="./images/cover/1.png" style="height: 180px;"
+                                                alt="First slide">
+                                            <div class="card-body" style="height: 37.410071942446045vh;">
+                                                <p class="text-justify primary-text" style="font-size: 14px;">Most
+                                                    industries already have BMS/SCADA installed on
+                                                    their system. Data is made available to the operators on a dashboard
+                                                    for
+                                                    control purposes.
+                                                    However, they neither
+                                                    have
+                                                    the skills nor the time available to understand and analyse the
+                                                    data,
+                                                    and take any inferred
+                                                    actions. Heta Datain
+                                                    solution uses available BMS/SCADA data to analyse key energy and
+                                                    performance parameters. Off site teams simulate the critical
+                                                    load sections to understand and eliminate inefficient loss making
+                                                    practices. Detailed
+                                                    reports and technical
+                                                    inputs
+                                                    assist operators to conduct operations smoothly and efficiently.
+                                                </p>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card border-0 card-bgm">
+                                            <img class="d-block" src="./images/cover/2.png" style="height: 180px;"
+                                                alt="Second slide">
+                                            <div class="card-body " style="height: 37.410071942446045vh;">
+                                                <span class="card-title card-title primary-heading p-0">Productivity Monitoring</span>
+                                                <p class="text-justify primary-text" style="font-size: 14px;">Energy
+                                                    Optimization and Management System” offers facility
+                                                    owners and operators a comprehensive integrated web based
+                                                    automated energy management program. Establish best practices across
+                                                    all
+                                                    energy
+                                                    functions including energy monitoring,
+                                                    scrutiny & surveillance with implicit post mortem of all issues
+                                                    which
+                                                    leads to
+                                                    greater energy efficiency and savings.We
+                                                    have cut back energy consumption in major District Cooling Plants,
+                                                    Industries,
+                                                    Hospitals and Medical institutes by about
+                                                    15-20% , amounting to 15 crore rupees per year.
+                                                </p>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card border-0 card-bgm">
+                                            <img class="d-block" src="./images/cover/3.png" alt="Third slide"
+                                                style="height: 180px;">
+                                            <div class="card-body" style="height: 37.410071942446045vh;">
+                                                <span class="card-title card-title primary-heading p-0">Energy Optimisation</span>
+                                                <p class="text-justify primary-text" style="font-size: 14px;">Energy
+                                                    "Optimization and Management System” offers facility
+                                                    owners and operators a comprehensive integrated web based
+                                                    automated energy management program. Establish best practices across
+                                                    all
+                                                    energy
+                                                    functions including energy monitoring,
+                                                    scrutiny & surveillance with implicit post mortem of all issues
+                                                    which
+                                                    leads to
+                                                    greater energy efficiency and savings.We
+                                                    have cut back energy consumption in major District Cooling Plants,
+                                                    Industries,
+                                                    Hospitals and Medical institutes by about
+                                                    15-20% , amounting to 15 crore rupees per year.
+                                                </p>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <div class="card border-0 card-bgm">
+                                            <img class="d-block " src="./images/cover/4.png" style="height: 120px;"
+                                                alt="First slide">
+                                            <div class="card-body" style="height: 310px;">
+                                                <span class="card-title primary-heading p-0">Large Industries</span>
+                                                <p class="text-justify primary-text" style="font-size: 14px;">This
+                                                    invention relates to invisible
+                                                    supervision of both energy consumption and productivity output of
+                                                    client enterprises
+                                                    using only one standard product. This product consists of sensor
+                                                    elements (ex. embedded data loggers)
+                                                    which are used to
+                                                    measure only the electric inputs.
+                                                    The Physical data Values are decoded with each Embedded Data logger
+                                                    using Artificial Intelligence
+                                                    Software and stored
+                                                    after condensing and evaluating it. The data is then fed to an
+                                                    Artificial Intelligence enabled software
+                                                    to condition,
+                                                    transform, analyze and predict the preferred outputs.
+                                                    Productivity of the machines is supervised by correlating the
+                                                    machine catalogs and ratings with the
+                                                    Artificial
+                                                    Intelligence software electric data.
+                                                </p>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-4 col-sm-12 mt-auto">
+                        <a href="./pages/productivity.html" target="_blank" style="text-decoration: none;">
+                            <div class="card border-0 shadow-sm card-bgm  zoom" data-aos="fade-right" >
+                                <div class="card-body">
+                                    <div class="d-flex flex-row bd-highlight mb-3">
+                                        <div class=" bd-highlight"><img src="images/pms.svg" alt=""></div>
+                                        <div class=" bd-highlight">
+                                            <div class="ml-4">
+                                                <h6 class="primary-heading">Productivity</h6>
+                                                <p class="text-justify primary-text f-2">
+                                                    We are monitoring productivity every minute by using artificial
+                                                    intelligence(AI) on data
+                                                    derived from machine
+                                                    consumption
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-12  mt-auto">
+                        <a href="./pages/energy.html" target="_blank" style="text-decoration: none;">
+                            <div class="card border-0 shadow-sm card-bgm  zoom" data-aos="fade-up" >
+                                <div class="card-body">
+                                    <div class="d-flex flex-row bd-highlight mb-3">
+                                        <div class="bd-highlight"><img src="images/pems.svg" alt=""></div>
+                                        <div class="bd-highlight">
+                                            <div class="ml-4">
+                                                <h6 class="primary-heading">Energy</h6>
+                                                <p class="text-justify primary-text f-2">
+                                                    Measuring 48 Parameter of feeder / machine data every minute and
+                                                    analysing the trends to
+                                                    forcast the future
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="col-md-4 mt-auto col-sm-12">
+                        <a href="./pages/pems.html" target="_blank" style="text-decoration: none;">
+
+                            <div class="card border-0 shadow-sm zoom card-bgm" data-aos="fade-left" >
+
+                                <div class="card-body">
+                                    <div class="d-flex flex-row bd-highlight mb-3">
+                                        <div class="bd-highlight"><img src="images/ems.svg" alt=""></div>
+                                        <div class="bd-highlight">
+                                            <div class="ml-4">
+                                                <h6 class="primary-heading">Productivity & Energy</h6>
+                                                <p class="text-justify primary-text f-2">
+                                                    Measuring 48 Parameter of feeder / machine data every minute and
+                                                    analysing the trends to
+                                                    forcast the future
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="" style="position: absolute;  right: 0; margin-top: 50px;" class="patents-badge">
+                        <img src="images/medal.png" alt="" style="width: 64px;" type="button" class="patents-badge"
+                            data-toggle="modal" data-target=".bd-example-modal-lg" rel="popover" data-placement="top"
+                            data-content="Click to know about our technological prowess"
+                            data-original-title="our patents">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid p-0"
+            style=" background-repeat: no-repeat; background:url('images/cover/random_1.svg');">
+            <div class="container-fluid p-0" style="height: 100vh;" data-aos="fade-up" data-aos-once="true">
+                <div class="col-md-12 shadow-sm p-2 card-heading">
+                    <div class="container-fluid">
+                        <div class="d-flex flex-row bd-highlight">
+                            <div class="p-2 bd-highlight " data-aos="flip-down" data-aos-duration="300" data-aos-once="true"
+                                data-aos-easing="ease-in-sine" data-aos-delay="700"><img src="images/heading/1.svg"
+                                    alt="">
+                            </div>
+                            <div class="p-2 bd-highlight ">
+                                <h6 class="primary-heading ">Area of Expertise</h6>
+                                <p class="text-justify primary-heading f-2 ">
+                                    Energy Audit / Energy Optimisation / Productivity Monitoring / Production
+                                    Optimisation /
+                                    Energy
+                                    Intensity / Embedded
+                                    Dataloggers , Industry 4.0, Wireless Communication, Cloud Computing , Real Time
+                                    Dashboards and
+                                    APP ,
+                                    Management
+                                    Information and Business Intelligence Reports
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-3 text-center  d-none d-sm-block ">
+                    <img src="images/philosophy_1.svg" alt="" class="" style="width: 80%;">
+                </div>
+
+                <div class="col-md-12 mt-3 text-center  d-sm-none ">
+                   <div class="card bg-none">
+                       <div class="card-body ">
+                            <h6 class="card-title primary-heading">Real Time Energy Optimisation</h6>
+                            <p class="card-text text-justify primary-text f-2 ">Using Non-Invasive Sensors and Dataloggers, 
+                                                 we log Energy Parameters from each Feeder / Equipment without any Outage.
+                                              This data is analysed for the Energy Map of the Process / Equipment for Energy Optimisation</p>
+                       </div>
+                   </div>
+
+                <div class="card bg-none mt-2">
+                    <div class="card-body ">
+                        <h6 class="card-title primary-heading">Real Time Productivity Monitoring</h6>
+                        <p class="card-text text-justify primary-text f-2 ">Using Non-Invasive Sensors and Dataloggers, we log necessary Production Parameters required for Productivity Monitoring
+                        in Real Time. We then map this data with Energy consumed to give Energy Intensity reports and analysis</p>
+                    </div>
+                </div>
+
+                <div class="card bg-none mt-2">
+                    <div class="card-body ">
+                        <h6 class="card-title primary-heading">Process Simulation</h6>
+                        <p class="card-text text-justify primary-text f-2 ">Using Simulations Software like ETAP / MITAB / Ansys / MATLAB / NI / ASPEN / HYSYS etc, we simulate the complete Process
+                        / Plant Equipment using design parameters and them we tweak the individual equipment behaviour to replicate present
+                        scenario.</p>
+                    </div>
+                </div>
+
+                </div>
+                
+
+            </div>
+            <!--SERVICES-->
+            <div class="container-fluid p-0 mt-5 " style=" background-repeat: no-repeat;
+         background:url('images/cover/random_1.svg');" data-aos="fade-up" data-aos-once="true">
+                <div class="col-md-12 shadow-sm p-4 card-heading">
+                    <div class="container-fluid">
+                        <div class="d-flex flex-row bd-highlight align-items-center">
+                            <div class="mr-3"><img src="images/heading/6.svg" alt="" data-aos="flip-down"
+                                    data-aos-duration="300" data-aos-easing="ease-in-sine" data-aos-delay="700" data-aos-once="true"></div>
+                            <div>
+                                <h6 class="primary-heading">Services</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row mt-5">
+                        <div class="col-md-3 mt-auto mb-auto">
+                            <div class="card " s>
+                                <img class="card-img-top ml-auto mr-auto mt-3" src="images/services/product.png"
+                                    style="width: 100px;" alt="Card image cap">
+                                <div class="card-body">
+                                    <h6 class="primary-heading">Productivity Optimisation</h6>
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-justify primary-text f-2">Remote & Real Time
+                                            Monitoring
+                                        </li>
+                                        <li class="list-group-item text-justify primary-text f-2">Parameter Analysis
+                                        </li>
+                                        <li class="list-group-item text-justify primary-text f-2">Fault Analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-auto mb-auto">
+                            <div class="card">
+                                <img class="card-img-top ml-auto mr-auto mt-3 " src="images/services/energy.png"
+                                    style="width: 100px;" alt="Card image cap">
+                                <div class="card-body ">
+                                    <h6 class="primary-heading">Energy Monitoring</h6>
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-justify primary-text f-2">Streamline processes
+                                        </li>
+                                        <li class="list-group-item text-justify primary-text f-2">Technology Upgrades
+                                        </li>
+                                        <li class="list-group-item text-justify primary-text f-2">Fault Analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-auto mb-auto">
+                            <div class="card ">
+                                <img class="card-img-top ml-auto mr-auto mt-3" src="images/services/pems.png"
+                                    style="width: 100px;" alt="Card image cap">
+                                <div class="card-body">
+                                    <h6 class="primary-heading">Productivity and Energy Monitoring</h6>
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-justify primary-text f-2">Remote & Real Time
+                                            Monitoring
+                                        </li>
+                                        <li class="list-group-item text-justify primary-text f-2">Parameter Analysis
+                                        </li>
+                                        <li class="list-group-item text-justify primary-text f-2">Fault Analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-auto mb-auto">
+                            <div class="card ">
+                                <img class="card-img-top ml-auto mr-auto mt-3" src="images/services/pems.png"
+                                    style="width: 100px;" alt="Card image cap">
+                                <div class="card-body ">
+                                    <h6 class="primary-heading"> Energy Audit</h6>
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-justify primary-text f-2">Energy Management
+                                            Solutions
+                                        </li>
+                                        <li class="list-group-item text-justify primary-text f-2">Optimization</li>
+                                        <li class="list-group-item text-justify primary-text f-2">Automation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END SERVICES-->
+            <!--How it works-->
+            <div class="container-fluid p-0 mt-5"  data-aos="fade-up" data-aos-once="true">
+                <div class="col-md-12 shadow-sm p-4 card-heading">
+                    <div class="container-fluid">
+                        <div class="d-flex flex-row bd-highlight align-items-center">
+                            <div class="mr-3"><img src="images/heading/1.svg" alt="" data-aos="flip-down" data-aos-once="true"
+                                    data-aos-duration="300" data-aos-easing="ease-in-sine" data-aos-delay="700"></div>
+                            <div>
+                                <h6 class="primary-heading">How We Achieve</h6>
+                                <p class="text-justify primary-text f-2 primary-heading">Doing Energy Audit is STATIC.
+                                    It
+                                    only gives the status of
+                                    Energy efficiency based on the present parameters, and the
+                                    remedies suggested are limited to that time scenario. Production, User Demand,
+                                    Seasonal
+                                    Weather,
+                                    Occupancy variation
+                                    etc. are parameters which vary every hour throughout the year, and this makes Energy
+                                    Optimisation of
+                                    these processes a
+                                    very DYNAMIC exercise.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" style="height: 100%;">
+                    <div class="row" style="height: 75%;">
+                        <img src="images/curve.png " class="curve-left d-none  d-sm-block d-md-block d-lg-block" alt="">
+                        <div class="col-md-3 mt-auto mb-auto p-5">
+                            <div class="card shadow-sm border-0 p-2 zoom">
+                                <img class="card-img-top ml-auto mr-auto mt-3 " src="images/process/p_2.svg"
+                                    style="width: 100px;" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="text-justify primary-text f-2">
+                                        Energy related Data logging to the Cloud
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-auto p-5">
+                            <div class="card shadow-sm border-0 zoom">
+                                <img class="card-img-top ml-auto mr-auto mt-3 " src="images/process/p_1.svg"
+                                    style="width: 100px;" alt="Card image cap">
+                                <div class="card-body ">
+                                    <p class="text-justify primary-text f-2">
+                                        Off-Shore Process Simulation
+                                    </p>
+                                </div>
+                                <img src="images/curve-btm.png " class="curve-bottom d-none  d-sm-block d-md-block d-lg-block" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-auto mb-auto p-5">
+                            <img src="images/curve.png " class="curve-right d-none  d-sm-block d-md-block d-lg-block" alt="">
+                            <div class="card shadow-sm border-0 zoom">
+                                <img class="card-img-top ml-auto mr-auto mt-3" src="images/process/p_4.svg"
+                                    style="width: 100px;" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="text-justify primary-text f-2">Dashboard & APP for status of Energy Flow
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mt-auto p-5">
+                            <div class="card shadow-sm border-0 zoom">
+                                <img class="card-img-top ml-auto mr-auto mt-3" src="images/process/p_3.svg"
+                                    style="width: 100px;" alt="Card image cap">
+                                <div class="card-body ">
+                                    <p class="text-justify primary-text f-2">
+                                        Expert advice on Process Flow during the year
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--How it works-->
+            <!--Deliverables-->
+            <div class="container-fluid p-0 mt-5" data-aos="fade-up" data-aos-once="true">
+                <div class="col-md-12 shadow-sm p-4 card-heading">
+                    <div class="container-fluid">
+                        <div class="d-flex flex-row bd-highlight align-items-center">
+                            <div class="mr-3"><img src="images/heading/3.svg" alt="" data-aos="flip-down" data-aos-once="true"
+                                    data-aos-duration="300" data-aos-easing="ease-in-sine" data-aos-delay="700"></div>
+                            <div>
+                                <h6 class="primary-heading ">Real Time Dashboards</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-3" style="height: 100%;">
+                    <div class="row" style="height: 75%; ">
+                        <div class="col-md-6 ">
+                            <div class="card shadow-sm border-0 p-3">
+                                <img class="card-img-top " src="images/rtd_1.png" alt="Card image cap"
+                                    data-aos="zoom-in-up" data-aos-duration="500" data-aos-easing="ease-in-sine" data-aos-once="true"
+                                    data-aos-delay="700">
+                                <div class="card-body p-0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="card shadow-sm border-0 p-3">
+                                <img class="card-img-top  " src="images/rtd_2.png" alt="Card image cap"
+                                    data-aos="zoom-in-up" data-aos-duration="500" data-aos-easing="ease-in-sine" data-aos-once="true"
+                                    data-aos-delay="700">
+                                <div class="card-body p-0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <div class="card shadow-sm border-0 p-3">
+                                <img class="card-img-top " src="images/rtd_3.png" alt="Card image cap"
+                                    data-aos="zoom-in-up" data-aos-duration="500" data-aos-easing="ease-in-sine" data-aos-once="true"
+                                    data-aos-delay="700">
+                                <div class="card-body p-0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-3">
+                            <div class="card shadow-sm border-0 p-3">
+                                <img class="card-img-top " src="images/rtd_4.png" alt="Card image cap"
+                                    data-aos="zoom-in-up" data-aos-duration="500" data-aos-easing="ease-in-sine" data-aos-once="true"
+                                    data-aos-delay="700">
+                                <div class="card-body p-0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Deliverables-->
+
+            <!--CEO DESK-->
+
+            <!--End CEO DESK-->
+            <div class="container-fluid p-0 mt-5" data-aos="fade-up" data-aos-once="true" id="ceo">
+                    <div class="col-md-12 shadow-sm p-4 card-heading">
+                        <div class="container-fluid">
+                            <div class="d-flex flex-row bd-highlight align-items-center">
+                                <div class="mr-3"><img src="images/ceo_icon.svg" alt="" data-aos="flip-down" data-aos-once="true"
+                                        data-aos-duration="300" data-aos-easing="ease-in-sine" data-aos-delay="700"></div>
+                                <div>
+                                    <h6 class="primary-heading ">CEO's Desk</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-5">
+                      
+                        <div class="row justify-content-center">
+                            <div class="col-4 text-left image-container">
+                               <img src="images/sir.jpg"  alt="Avatar" class="ceo-image rounded shadow" style="width:80%;">
+                                <div class="middle">
+                                   <a href=" https://www.linkedin.com/in/hemant-diddee-4a89084/?originalSubdomain=in"
+                                    target="_blank">
+                                    <div class="text" >
+                                        <img src="images/linkdin.png" alt="Avatar" style="width: 50px;">
+                                    </div>
+                                    </a>
+                                </div>
+                                <p class="mt-2 primary-heading">MR. HEMANT DIDDEE <span style="font-size: 14px;">(B.E(Hons), D.B.M, M.I.E.T.E)</span></p>
+                            </div>
+                            <div class="col-6  text-left">
+                                <p class="text-justify">
+                                    "I am a Senior Consultant in IT in Power Distribution ( including Smart Grid) with REC Power
+                                    Distribution Company Limited, an ISO 9001:2008, ISO 14001:2004 & OHSAS 18001:2007 Certified Company,
+                                    a wholly owned subsidiary of REC Ltd., a 'Navratna' CPSE under Ministry of Power, Government of India.
+                                    I have over 40 years experience in Teaching and Industries, and am a Certified Energy Auditor."
+                                </p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">35 years experience in the Industry.</li>
+                                    <li class="list-group-item">Accredited Energy Auditor by Bureau of Energy Efficiency,Ministry of Power,Government of
+                                        India.</li>
+                                    <li class="list-group-item">Senior Consultant to REC Power Distribution Company Ltd. in the area of Smart Grid and
+                                        Information technology in
+                                        Distribution.</li>
+                                    <li class="list-group-item">25 years as Associate Professor in Engineering College.</li>
+                                
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            
+                        </div>
+                            
+                    </div>
+            </div>
+            <!--Technology Used-->
+            <div class="container-fluid p-0 mt-5" data-aos="fade-up" data-aos-once="true">
+
+                <div class="col-md-12 shadow-sm p-4 card-heading">
+                    <div class="container-fluid">
+                        <div class="d-flex flex-row bd-highlight align-items-center">
+                            <div class="mr-3"><img src="images/heading/2.svg" alt="" data-aos="flip-down" data-aos-once="true"
+                                    data-aos-duration="300" data-aos-easing="ease-in-sine" data-aos-delay="700"></div>
+                            <div>
+                                <h6 class="primary-heading ">Technology Used </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-5">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm p-3" data-aos="zoom-in-right" data-aos-duration="300" data-aos-once="true"
+                                data-aos-delay="700">
+                                <img src="images/tech/t_3.svg" style="width: 120px;" class="ml-auto mr-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm p-3" data-aos="zoom-in-right" data-aos-duration="300" data-aos-once="true"
+                                data-aos-delay="700">
+                                <img src="images/tech/t_1.svg" style="width: 120px;" class="ml-auto mr-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm p-3" data-aos="zoom-in-left" data-aos-duration="300" data-aos-once="true"
+                                data-aos-delay="700">
+                                <img src="images/tech/t_2.svg" style="width: 120px;" class="ml-auto mr-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm p-3" data-aos="zoom-in-left" data-aos-duration="300" data-aos-once="true"
+                                data-aos-delay="700">
+                                <img src="images/tech/t_7.svg" style="width: 120px;" class="ml-auto mr-auto" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm p-3" data-aos="zoom-in-right" data-aos-duration="300" data-aos-once="true"
+                                data-aos-delay="700">
+                                <img src="images/tech/t_4.svg" style="width: 120px;" class="ml-auto mr-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm p-3" data-aos="zoom-in-right" data-aos-duration="300" data-aos-once="true"
+                                data-aos-delay="700">
+                                <img src="images/tech/t_5.svg" style="width: 120px;" class="ml-auto mr-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3"> 
+                            <div class="card border-0 shadow-sm p-3" data-aos="zoom-in-left" data-aos-duration="300" data-aos-once="true"
+                                data-aos-delay="700">
+                                <img src="images/tech/t_8.svg" style="width: 120px;" class="ml-auto mr-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-0 shadow-sm p-3" data-aos="zoom-in-left" data-aos-duration="300" data-aos-once="true"
+                                data-aos-delay="700">
+                                <img src="images/tech/t_6.svg" style="width: 120px;" class="ml-auto mr-auto" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-3 text-center">
+                            <div class="card border-0 shadow-sm p-3" data-aos="zoom-in-right" data-aos-duration="300" data-aos-once="true"
+                                data-aos-delay="700">
+                                <img src="images/tech/t_9.svg" style="width: 120px;" class="ml-auto mr-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="card border-0 shadow-sm p-3" data-aos="zoom-in-right" data-aos-duration="300" data-aos-once="true"
+                                data-aos-delay="700">
+                                <img src="images/tech/t_10.svg" style="width: 120px;" class="ml-auto mr-auto" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Technology Used-->
+            <!--Contact form-->
+            <div class="container-fluid p-0 mt-5" data-aos="fade-up" data-aos-once="true" style="
+                    
+                    ">
+                <div class="col-md-12 shadow-sm p-4 card-heading">
+                    <div class="container-fluid">
+                        <div class="d-flex flex-row bd-highlight align-items-center">
+                            <div class="mr-3"><img src="images/heading/5.svg" alt="" data-aos="flip-down"
+                                    data-aos-duration="300" data-aos-easing="ease-in-sine" data-aos-delay="700"></div>
+                            <div>
+                                <h6 class="primary-heading ">Do you want us to contact you ?</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <form id="contact-forms" method="post" action="" role="form">
+                <div class="row container mt-4  " id="forms">
+                
+                    <div class="col-md-1"></div>
+                     
+                    <div class="col-md-6 text-white f-2 p-2">
+                    <div class="row primary-heading ">
+                      
+                        <div class="col-md-6">
+                            
+                                <div class="form-group primary-heading">
+                                    <label for="form_name ">Firstname *</label>
+                                    <input id="form_name" type="text" name="name" class="form-control"
+                                        placeholder="Please enter your firstname *" required="required"
+                                        data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Lastname *</label>
+                                    <input id="form_lastname" type="text" name="lname" class="form-control"
+                                        placeholder="Please enter your lastname *" required="required"
+                                        data-error="Lastname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control"
+                                        placeholder="Please enter your email *" required="required"
+                                        data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_phone">Phone</label>
+                                    <input id="form_phone" type="number" name="phone"  class="form-control"  min="10" max="10"  required="required" 
+                                        placeholder="Please enter your phone">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Message *</label>
+                                    <textarea id="form_message" name="message" class="form-control"
+                                        placeholder="Message for me *" rows="4" required
+                                        data-error="Please,leave us a message."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                            <div class="row">
+                                  <div class="col-md-3 ">
+                                           <input type="submit" id="submit_id" class="btn btn-sm btn-success btn-send" value="Send message">
+                               
+                                   </div>
+                                    <div class="col-md-9 text-left">
+                                           <div class="spinner-border" role="status" id="loader">
+                                                <span class="sr-only">Loading...</span>
+                                        </div>
+                                   </div>
+                            </div>
+                               
+                            </div>
+                        
+                            
+                        </div>
+                    </div>
+                    </form>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-4 ">
+                        <div class="col-md-12 bg-light p-3 rounded">
+                            <img src="images/hetadatain.png" alt="" style="width: 140px;">
+                            <p class="text-justify primary-heading f-2 mt-2 ">341,Chanakya Apartment,<br>
+                                Laxminagar, Nagpur 440022 India
+                            </p>
+                            <div class="d-flex align-items-center ">
+                                <div>
+                                    <p class="primary-heading f-2 font-weight-normal">Mobile: 9422111044</p>
+                                </div>
+                                <div>
+                                    <p class="ml-3 primary-heading f-2 font-weight-normal">Email: hdiddee@gmail.com <br>helpdesk@hetadatain.in</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <!--end Contat form-->
+
+            <div class="col-md-12 text-center highlight">
+                 <p class="p-3 primary-heading">2020 Copyright: Hetadatain.com</p>
+             </div>
+           </div>
+    </div>
+    <!-- Large modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="card rounded" style="  background-repeat: no-repeat;
+                  background:url('images/modal/modal_info.svg');">
+                    <div class="header header p-2 shadow-sm card-heading justify-content-center">
+                        <button type="button" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="d-flex flex-row bd-highlight align-items-center">
+                            <div class="mr-3"><img src="images/cover/icon_patent.svg" alt=""></div>
+                            <div>
+                                <img src="images/hetadatain.png" alt="" style="width: 140px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="card-title primary-heading ">Technology Breakthrough</h5>
+                                    <p class="card-text text-justify primary-text f-2 primary-text">
+                                        Our Patent (Pending) on <span class="highlight p-1 rounded" style="font-weight: 500;">"Process Change in District Cooling Systems Energy Transfer Station"</span> 
+                                        is heralded to be a breakthrough in ETS
+                                        operation. The new process/philosophy of operation of ETS increases the
+                                        RT/CUM value (Cooling RT delivered per Cubic
+                                        meter of chilled water) by 10-12% on the Primary side of the ETS, and by
+                                        more than 40-45% on the secondary side of the
+                                        ETS. The flow of Chilled Water in the ETS and temperature variations get
+                                        steadied. The FCV valve movements get
+                                        minimized, thereby reducing the maintenance costs and down time. In monetary
+                                        terms, a saving of more than 25-30% per ETS
+                                        per day is achieved. When applied to a large 40,000 TR District Cooling
+                                        Plant at Dubai, savings to the tune of 7 million
+                                        AED were demonstrated.
+                                    </p>
+                                 
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="card-title primary-heading ">Invisible Supervision</h5>
+                                    <p class="card-text text-justify primary-text f-2 primary-text">Our Patent
+                                        (Pending) on <span class="highlight p-1 rounded" style="font-weight: 500;">"Invisible Supervision of a Client's Enterprise for Energy and
+                                        Productivity"</span>
+                                        is an innovation
+                                        for invisible supervision of both energy consumption and productivity using
+                                        only one standard product. This product
+                                        consists of embedded data loggers which are used to measure only the
+                                        electric inputs. This system uses AI technologies to find the relationship between
+                                        Energy and Productivity, thereby avoiding usage of additional sensors on the machines. 
+                                        Invisible Supervision data is untouched and generates alerts automatically
+                                        For a leading pharmaceuticals manufacturer, machine running times increased
+                                        by 24%, energy consumption increased by only
+                                        10%, energy consumed per unit running time decreased by 40%, and the Return
+                                        on Investment was less than 6 months.
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- Small modal -->
+    
+
+
+<!-- Modal -->
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js'></script>
+</body>
+
+
+<script>
+    $(document).ready(function () {
+ $('#loader').hide();
+        $('.modal').modal('show');
+        AOS.init({
+            duration: 1200,
+        })
+        $('.close').click(function () {
+            $('.modal').modal('hide');
+        })
+        $('.mega-menu').mouseover(function () {
+            $('.mega-menu-view').removeClass("d-none");
+        });
+
+         $('.mega-menu-view').mouseleave(function () {
+            $('.mega-menu-view').addClass("d-none");
+        }); 
+
+        $('.sm-menu').mouseover(function () {
+            $('.menu-presentation').removeClass("d-none");
+        });
+
+        $('.menu-presentation').mouseleave(function () {
+            $('.menu-presentation').addClass("d-none");
+        });
+
+        $(function () {
+            $(".patents-badge").popover('show');
+            setTimeout(function () {
+                $('.patents-badge').popover('hide');
+            }, 10000);
+
+        });
+        $(".patents-badge").click(function () {
+            $('.patents-badge').popover('dispose');
+            // alert("Handler for .click() called.");
+        });
+
+
+
+
+    });
+    document.addEventListener('aos:out', ({ detail }) => {
+        console.log('animated in', "detail");
+    });
+
+    document.addEventListener('aos:in', ({ detail }) => {
+        console.log('animated in', detail);
+    });
+    
+  $(function(){
+        $("#submit_id").click(function(event){
+
+           // event.preventDefault();
+           var form_name =  $("#form_name").val();
+           var form_lastname =  $("#form_lastname").val();
+           var form_email =  $("#form_email").val();
+           var form_message =  $("#form_message").val();
+           var form_phone =  $("#form_phone").val();
+           
+                $('#submit_id').prop('disabled', true);
+                $('#loader').show();
+            $.ajax({
+                    url:'contact_us.php',
+                    type:'POST',
+                    data:{'first_name':form_name,'last_name':form_lastname ,form_email
+                                        ,'message': form_message, 'phone':form_phone  },
+                    success:function(result){
+                       $('#submit_id').prop('disabled', false);
+                         $('#loader').hide();
+                        if(result=="success");
+                          {
+                          Swal.fire({
+                              icon: 'success',
+                              title: 'Success...',
+                              text: 'Message sent successfully',
+                             
+                            })
+                          }
+                    }
+
+            });
+           
+                
+        });
+    });
+</script>
+
+</html>
