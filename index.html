@@ -16,72 +16,57 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
     <script src="js/validation.js"></script>
+    <script src="js/chatButtons.js"></script>
+    <script src="js/modal.js"></script>
+
 
 </head>
 
 <body style="font-family: 'Roboto', sans-serif; overflow-x: hidden; " data-spy="scroll">
-      <script>
-var modal = document.getElementById("myModal");
+<!-- Modal goes here -->
 
-// Get the button that opens the modal
-var btn = document.getElementById("dropdownMenuButton");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-newsletter">
+		<div class="modal-content">
+			<form action="/actionPage.php" method="post">
+				<div class="modal-header">
+					<h4>Provide Email to continue</h4>	
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+				</div>
+				<div class="modal-body">					
+					<p>Please enter your full name & email address to get this presentation delivred right at your mailbox
+                 </p>
+					<div class="input-group">
+						<input type="text" class="form-control" name="first_name" placeholder="Enter your first name" required>
+                        <input type="text" class="form-control" name="last_name" placeholder="Enter your last name" required>
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-// Get the modal
-
-    <div id="myModal" class="modal fade">
-        <div class="modal-dialog modal-newsletter">
-            <div class="modal-content">
-                <form action="/examples/actions/actionPage.php" method="post">
-                    <div class="modal-header">
-                        <h4>Provide Email to continue</h4>	
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
-                    </div>
-                    <div class="modal-body">					
-                        <p>Please enter your email address to continue</p>
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email" required>
-                            <span class="input-group-btn">
-                                <input type="submit" class="btn btn-primary" value="Validate">
-                            </span>
-                        </div>
-                    </div>
-                </form>			
-            </div>
-        </div>
-    </div>
+                      <div class="input-group">
+						<input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+						<span class="input-group-btn">
+							<input type="submit" class="btn btn-primary" value="Validate">
+						</span> 
+					</div>
+				</div>
+			</form>			
+		</div> </div>
+	</div>
+</div>
+<!-- chat box goes here -->
     <button class="chat-open-button" onclick="openForm()">Help Desk</button>
     
     <div class="chat-popup" id="myForm">
-      <form action="/actionPage.php" class="form-container">
-        <h2>Need Any Help ?</h2>
-    
+      <form action="" class="form-container">
+        <h>Need Any Help ?</h3>
       <!--   <label for="msg"><b>What Can We Help With ?</b></label> -->
        <!--  <textarea placeholder="Type message.." name="msg" required></textarea> -->
-       <button type="submit" class="btn btn1 ">Know more about our products</button>
-       <button type="submit" class="btn btn2">Contact the CEO</button>
-       <button type="submit" class="btn btn3" onclick="">Want us to contact you? </button>
+       <button  class="btn btn1" onclick="openForm()" >Know more about our products</button>
+       <button  class="btn btn2">Contact the CEO</button>
+       <button  class="btn  btn3" href="#" onclick="">Want us to contact you? </button>
         <button type="button" class="cancel" onclick="closeForm()">Close</button>
+
       </form>
+
     </div>
     
     <script>
@@ -118,12 +103,12 @@ window.onclick = function(event) {
 
                     <li class="nav-item">
                         <div class="dropdown">
-                            <button class="btn  bg-primary-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            <button class="btn mdlB bg-primary-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                             Presentation
                             </button>  
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                             <a  href="docs/HETADATAIN%20PRESENTATION.pdf" target="_blank" class="links dropdown-item"> 
+                             <a onclick="showModal()" target="_blank" class="links dropdown-item"> 
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -131,7 +116,7 @@ window.onclick = function(event) {
                                     <div class="f-1 bd-highlight ml-2">Energy Optimisation, A new approach</div>
                                 </div>
                             </a>
-                            <a href="docs/HD%20Pump%20Efficiency%20Presentation.pdf" target="_blank" class="links dropdown-item">
+                            <a onclick="showModal()" target="_blank" class="links dropdown-item">
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -140,7 +125,7 @@ window.onclick = function(event) {
                                     Simulation Techniques</div>
                                 </div>
                             </a>
-                            <a href="docs/HETA_IoT_AI_APR_2020.pdf" target="_blank" class="links dropdown-item">
+                            <a onclick="showModal()" target="_blank" class="links dropdown-item">
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -148,7 +133,7 @@ window.onclick = function(event) {
                                     <div class="f-1 bd-highlight ml-2">IoT and AI. How to automate a Process</div>
                                 </div>
                             </a>
-                            <a href="docs/M%26V%20Report.pdf" target="_blank" class="links dropdown-item">
+                            <a onclick="showModal()" target="_blank" class="links dropdown-item">
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -156,7 +141,7 @@ window.onclick = function(event) {
                                     <div class="f-1 bd-highlight ml-2">M&V Report Calculation details</div>
                                 </div>
                             </a>
-                            <a href="docs/HETA_PMS_EMS_APR_2020.pdf" target="_blank" class="links dropdown-item">
+                            <a onclick="showModal()" target="_blank" class="links dropdown-item">
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -164,7 +149,7 @@ window.onclick = function(event) {
                                     <div class="f-1 bd-highlight ml-2">Productivity & Energy Optimisation.<br> A novel method</div>
                                 </div>
                             </a>
-                            <a href="docs/HETA_EMS_Institutions_Hostels.pdf" target="_blank" class="links dropdown-item">
+                            <a onclick="showModal()" target="_blank" class="links dropdown-item">
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
