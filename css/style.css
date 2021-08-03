@@ -43,7 +43,7 @@ font-size: 14px;
 
 .links:hover{
     text-decoration: none  !important;
-    color:#116149 !important;
+    color:#1fad83 !important;
      transform: scale(1.03);
 }
 
@@ -183,12 +183,13 @@ DropDown
   bottom: 23px;
   right: 28px;
   width: 280px;
+  border: radius 10%;
 }
 
 /* The popup chat - hidden by default */
 .chat-popup {
   
-  z-index: 10;
+  z-index: 2;
 
   display: block;
   position: fixed;
@@ -200,16 +201,15 @@ DropDown
 
 /* Add styles to the form container */
 .form-container {
-  z-index: 11;
+  z-index: 2;
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
 
-/* Full-width textarea */
 .form-container textarea {
   width: 100%;
-  z-index: 11;
+  z-index: 2;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
@@ -225,9 +225,8 @@ DropDown
   outline: none;
 }
 
-/* Set a style for the submit/send button */
 .form-container .btn {
-  background-color: #04AA6D;
+  background-color: #116149;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -253,7 +252,15 @@ DropDown
 }
 
 
-
+h2 { 
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 350;
+  margin-right: 0;
+  font-weight: bold;
+} 
 .modal-newsletter {	
   color: #999;
   width: 625px;
@@ -264,6 +271,7 @@ DropDown
   padding: 30px;
   border-radius: 0;		
   border: none;
+
 }
 .modal-newsletter .modal-header {
   border-bottom: none;   
@@ -332,4 +340,20 @@ DropDown
 .hint-text {
   margin: 100px auto;
   text-align: center;
+}
+#ceoContactBody{
+  text-align: left;
+  font-weight: bold;
+  
+
+}
+
+#ceoModal{
+  border-radius: 10%;
+}
+
+#h6{
+  text-align: left;
+  padding-left: 5%;
+
 }

@@ -1,0 +1,24 @@
+{
+  "name": "hetadatain",
+  "version": "1.0.0",
+  "description": "Node Mailer",
+  "main": "contact_page.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node contact_page.js"
+  },
+  "author": "I_wilder",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "multiparty": "^4.2.2",
+    "mysql2": "^2.2.5",
+    "nodemailer": "^6.4.11",
+    "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "12.14.1"
+  }
+}

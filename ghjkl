@@ -1,0 +1,21 @@
+<a href="./pages/productivity.html" target="_blank" style="text-decoration: none;">
+                            <div class="card border-0 shadow-sm card-bgm zoom aos-init aos-animate" data-aos="fade-right">
+                                <div class="card-body">
+                                    <div class="d-flex flex-row bd-highlight mb-3">
+                                        <div class=" bd-highlight"><img src="images/pms.svg" alt=""></div>
+                                        <div class=" bd-highlight">
+                                            <div class="ml-4">
+                                                <h6 class="primary-heading">Productivity</h6>
+                                                <p class="text-justify primary-text f-2">
+                                                    We are monitoring productivity every minute by using artificial
+                                                    intelligence(AI) on data
+                                                    derived from machine
+                                                    consumption
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </a>

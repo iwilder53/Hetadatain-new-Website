@@ -17,25 +17,95 @@
     <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
     <script src="js/validation.js"></script>
     <script src="js/chatButtons.js"></script>
-    <script src="js/modal.js"></script>
 
 
 </head>
 
 <body style="font-family: 'Roboto', sans-serif; overflow-x: hidden; " data-spy="scroll">
-<!-- Modal goes here -->
+
+<!-- CEO Modal Goes Here -->
 
 
-<div id="myModal" class="modal fade">
+<div id="ceoModal" class="modal fade">
+	<div class="modal-dialog modal-newsletter">
+		<div class="modal-content">            
+
+			<form action="send" method="post">
+				<div class="modal-header"  id="h4Ceo">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+					<h4 >Mr.Hemant Diddee</h4>	
+
+				</div>
+                <div id="h6"> <h6>CEO,Heta Datain</h6></div>					
+
+				<div class="modal-body">
+					<p id="ceoContactBody">Phone : 9422111044 <br> Email : hdiddee@gmail.com <br>
+                        helpdesk@hetadatain.in </p>
+			</form>			
+		</div>   </div>
+    <!--     <div class="col-md-9 text-left">
+               <div class="spinner-border" role="status" id="loader">
+                    <span class="sr-only">Loading...</span>
+            </div>
+       </div> --></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+      <!-- test modal here cuz old one keeps popping up on load -->
+<!-- 
+      <div class="container">
+        <h2>Fading Modal</h2>
+        <p>Add the "fade" class to the modal container if you want the modal to fade in on open and fade out on close.</p>
+      
+       
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          Open modal
+        </button>
+      
+       
+        <div class="modal fade" id="myModal1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+          
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <div class="modal-body">
+                Modal body..
+              </div>
+              
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+       -->
+<!-- Presentation Modal goes here -->
+
+
+<div id="myModal1" class="modal fade " role="dialog">
 	<div class="modal-dialog modal-newsletter">
 		<div class="modal-content">
-			<form action="/actionPage.php" method="post">
+			<form id="modal-form" action="send" method="post" enctype="multipart/form-data" role="form">
 				<div class="modal-header">
 					<h4>Provide Email to continue</h4>	
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
 				</div>
 				<div class="modal-body">					
-					<p>Please enter your full name & email address to get this presentation delivred right at your mailbox
+					<p>Please enter your full name & email address to get this presentation delivered right at your mailbox
                  </p>
 					<div class="input-group">
 						<input type="text" class="form-control" name="first_name" placeholder="Enter your first name" required>
@@ -43,38 +113,53 @@
 
                       <div class="input-group">
 						<input type="email" class="form-control" name="email" placeholder="Enter your email" required>
-						<span class="input-group-btn">
-							<input type="submit" class="btn btn-primary" value="Validate">
+						<span class="input-group-btn btn btn-primary btn-sm btn-success btn-send">
+							<input type="submit" id="modal_presentation" class="btn btn-primary form-control btn-sm btn-success btn-send" value="Done">
 						</span> 
 					</div>
 				</div>
-			</form>			
+			</form>		
+        </div>
+       <div class="col-md-9 text-left">
+               <div class="spinner-border" role="status" id="loader">
+                    <span class="sr-only">Loading...</span>
+            </div>
+       </div>	
 		</div> </div>
 	</div>
 </div>
+
+
+
+
+
 <!-- chat box goes here -->
     <button class="chat-open-button" onclick="openForm()">Help Desk</button>
     
     <div class="chat-popup" id="myForm">
       <form action="" class="form-container">
-        <h>Need Any Help ?</h3>
+        <h2>Need Any Help ?</h2>
       <!--   <label for="msg"><b>What Can We Help With ?</b></label> -->
        <!--  <textarea placeholder="Type message.." name="msg" required></textarea> -->
-       <button  class="btn btn1" onclick="openForm()" >Know more about our products</button>
-       <button  class="btn btn2">Contact the CEO</button>
-       <button  class="btn  btn3" href="#" onclick="">Want us to contact you? </button>
-        <button type="button" class="cancel" onclick="closeForm()">Close</button>
+   <a href="./pages/products.html" class="btn btn1">   About our products</a>
+       <button  class="btn btn2" href="#" onclick="showCeoContact();return false;" >Contact the CEO</button>
+       <button  class="btn  btn3" href="#" onclick="contactButton();return false;">Want us to contact you? </button>
+       <button type="button" class="cancel" onclick="closeForm()">Close</button>
 
       </form>
 
     </div>
-    
+    <script src="js/modal.js"></script>
+    <script src="js/chatButtons.js"></script>
+
     <script>
+
+     
     function openForm() {
       document.getElementById("myForm").style.display = "block";
     }
-    
-    function closeForm() {
+/*   ucn broadband cs  08069033999
+ */    function closeForm() {
       document.getElementById("myForm").style.display = "none";
     }
     </script>
@@ -108,7 +193,7 @@
                             Presentation
                             </button>  
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                             <a onclick="showModal()" target="_blank" class="links dropdown-item"> 
+                             <a onclick="showModal(0)" target="_blank" class="links dropdown-item"> 
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -116,7 +201,7 @@
                                     <div class="f-1 bd-highlight ml-2">Energy Optimisation, A new approach</div>
                                 </div>
                             </a>
-                            <a onclick="showModal()" target="_blank" class="links dropdown-item">
+                            <a onclick="showModal(1)" target="_blank" class="links dropdown-item">
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -125,7 +210,7 @@
                                     Simulation Techniques</div>
                                 </div>
                             </a>
-                            <a onclick="showModal()" target="_blank" class="links dropdown-item">
+                            <a onclick="showModal(2)" target="_blank" class="links dropdown-item">
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -133,7 +218,7 @@
                                     <div class="f-1 bd-highlight ml-2">IoT and AI. How to automate a Process</div>
                                 </div>
                             </a>
-                            <a onclick="showModal()" target="_blank" class="links dropdown-item">
+                            <a onclick="showModal(3)" target="_blank" class="links dropdown-item">
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -141,7 +226,7 @@
                                     <div class="f-1 bd-highlight ml-2">M&V Report Calculation details</div>
                                 </div>
                             </a>
-                            <a onclick="showModal()" target="_blank" class="links dropdown-item">
+                            <a onclick="showModal(4)" target="_blank" class="links dropdown-item">
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -149,7 +234,7 @@
                                     <div class="f-1 bd-highlight ml-2">Productivity & Energy Optimisation.<br> A novel method</div>
                                 </div>
                             </a>
-                            <a onclick="showModal()" target="_blank" class="links dropdown-item">
+                            <a onclick="showModal(5)" target="_blank" class="links dropdown-item">
                                 <div class="d-flex flex-row bd-highlight  align-items-center">
                                     <div class=" bd-highlight">
                                         <img src="./images/ems.svg" alt="" style="width: 30px;">
@@ -570,7 +655,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="" style="position: absolute;  right: 0; margin-top: 50px;" class="patents-badge">
+                    <div class="" style="position: absolute;  left: 0; margin-top: 69px;" class="patents-badge">
                         <img src="images/medal.png" alt="" style="width: 64px;" type="button" class="patents-badge"
                             data-toggle="modal" data-target=".bd-example-modal-lg" rel="popover" data-placement="top"
                             data-content="Click to know about our technological prowess"
@@ -1002,9 +1087,9 @@
             </div>
             <!--Technology Used-->
             <!--Contact form-->
-            <div class="container-fluid p-0 mt-5" data-aos="fade-up" data-aos-once="true" style="
+            <div class="container-fluid p-0 mt-5" data-aos="fade-up" data-aos-once="true" s\
                     
-                    ">
+                    >
                 <div class="col-md-12 shadow-sm p-4 card-heading">
                     <div class="container-fluid">
                         <div class="d-flex flex-row bd-highlight align-items-center">
@@ -1016,7 +1101,8 @@
                         </div>
                     </div>
                 </div>
-                 <form id="contact-forms" method="post" action="" role="form">
+                 <form id="contact-forms" method="post" action="send" enctype="multipart/form-data"
+                 role="form">
                 <div class="row container mt-4  " id="forms">
                 
                     <div class="col-md-1"></div>
@@ -1027,19 +1113,19 @@
                         <div class="col-md-6">
                             
                                 <div class="form-group primary-heading">
-                                    <label for="form_name ">Firstname *</label>
+                                    <label for="form_name ">First name *</label>
                                     <input id="form_name" type="text" name="name" class="form-control"
                                         placeholder="Please enter your firstname *" required="required"
-                                        data-error="Firstname is required.">
+                                        data-error="First name is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="form_lastname">Lastname *</label>
+                                    <label for="form_lastname">Last name *</label>
                                     <input id="form_lastname" type="text" name="lname" class="form-control"
                                         placeholder="Please enter your lastname *" required="required"
-                                        data-error="Lastname is required.">
+                                        data-error="Last name is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -1055,7 +1141,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="form_phone">Phone</label>
-                                    <input id="form_phone" type="number" name="phone"  class="form-control"  min="10" max="10"  required="required" 
+                                    <input id="form_phone" type="number" name="phone"  class="form-control"maxlength="10"  required="required" 
                                         placeholder="Please enter your phone">
                                     <div class="help-block with-errors"></div>
                                 </div>
@@ -1119,7 +1205,7 @@
     </div>
     <!-- Large modal -->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
+        aria-hidden="true" id="bigModal" >
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="card rounded" style="  background-repeat: no-repeat;
@@ -1196,10 +1282,11 @@
 <script>
     $(document).ready(function () {
  $('#loader').hide();
-        $('.modal').modal('show');
+        $('#bigModal').modal('show');
         AOS.init({
             duration: 1200,
         })
+        $('#myModal1').modal('hide');  
         $('.close').click(function () {
             $('.modal').modal('hide');
         })
@@ -1243,7 +1330,7 @@
         console.log('animated in', detail);
     });
     
-  $(function(){
+ /*  $(function(){
         $("#submit_id").click(function(event){
 
            // event.preventDefault();
@@ -1256,10 +1343,9 @@
                 $('#submit_id').prop('disabled', true);
                 $('#loader').show();
             $.ajax({
-                    url:'contact_us.php',
+                    url:'/send',
                     type:'POST',
-                    data:{'first_name':form_name,'last_name':form_lastname ,form_email
-                                        ,'message': form_message, 'phone':form_phone  },
+                    data:{'first_name':form_name,'last_name':form_lastname ,form_email ,'message': form_message, 'phone':form_phone  },
                     success:function(result){
                        $('#submit_id').prop('disabled', false);
                          $('#loader').hide();
@@ -1278,7 +1364,7 @@
            
                 
         });
-    });
+    }); */
 </script>
-
+<script src="index.js"></script>
 </html>
