@@ -1,6 +1,9 @@
  body {
       position: relative; 
   }
+  .justifyCenter{
+    text-align: justify;
+  }
   .bg-primary-btn{
     background-color:#116149 ;
     color: #fff;
