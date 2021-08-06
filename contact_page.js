@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 const multiparty = require("multiparty");
 require("dotenv").config();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 80;
 
 const app = express();
 
@@ -57,10 +57,10 @@ app.post("/send", (req, res) => {
     console.log(data);
     // console.log(data.index);
 
-    var basicInfo = `Hello team Hetadatain ! I am ${data.name}  ${data.lname}\n Email : ${data.email}\n  Mobile : ${data.phone}`;
+    var basicInfo = `Hello team Hetadatain ! I am ${data.name}  ${data.lname}\n Email : ${data.email}\n  Mobile : ${data.phone}  `;
     const mail = {
       sender: `${data.name} <${data.email}>`,
-      to: process.env.EMAIL, // receiver email,
+      to: 'hdiddee@hetadatain.com', // receiver email,
       subject: data.subject,
       // text: `${data.name} <${data.email}> \n${data.message}`,
       text: `${basicInfo} ${data.message}`
@@ -89,13 +89,13 @@ app.post("/presentation", (req, res) => {
     console.log(data);
     // console.log(data.index);
 
-    var basicInfo = `Hello team Hetadatain ! I am ${data.first_name}  ${data.last_name}\n Email : ${data.email}`;
+    var basicInfo = `Hello team Hetadatain ! I am ${data.first_name}  ${data.last_name}\n Email : ${data.email} \n I just requested a presentation. `;
     const mail = {
       sender: `${data.name} <${data.email}>`,
-      to: process.env.EMAIL, // receiver email,
+      to: 'hdiddee@hetadatain.com', // receiver email,
       subject: data.subject,
       // text: `${data.name} <${data.email}> \n${data.message}`,
-      text: `${basicInfo} ${data.message}`
+      text: `${basicInfo}`
     };
     createLink(data.index);
     console.log(data.index);
